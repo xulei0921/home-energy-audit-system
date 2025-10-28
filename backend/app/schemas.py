@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-from typing import Optional, List
+from typing import Optional, List, Dict
 from datetime import date, datetime
 from enum import Enum
 # 设备类型枚举
@@ -37,6 +37,15 @@ class Season(str, Enum):
     summer = "summer"
     autumn = "autumn"
     winter = "winter"
+
+# 新增分析时间段枚举
+class AnalysisPeriod(str, Enum):
+    current_month = "current_month"     # 当月
+    last_month = "last_month"           # 上月
+    last_3_months = "last_3_months"     # 近3个月
+    last_6_months = "last_6_months"     # 近6个月
+    current_year = "current_year"       # 今年
+    custom = "custom"                   # 自定义
 
 # 用户模型 - 基础
 class UserBase(BaseModel):
@@ -135,6 +144,10 @@ class RecommendationBase(BaseModel):
     estimated_cost_saving: Optional[float] = None
     implementation_difficulty: Optional[DifficultyLevel] = DifficultyLevel.medium
     device_id: Optional[int] = None
+    source: Optional[str] = "rule_based"
+    analysis_period: Optional[str] = None
+    analysis_start_date: Optional[date] = None
+    analysis_end_date: Optional[date] = None
 
 # 建议模型 - 创建
 class RecommendationCreate(RecommendationBase):
@@ -150,6 +163,9 @@ class RecommendationUpdate(BaseModel):
     implementation_difficulty: Optional[DifficultyLevel] = None
     is_implemented: Optional[bool] = None
     device_id: Optional[int] = None
+    analysis_period: Optional[str] = None
+    analysis_start_date: Optional[date] = None
+    analysis_end_date: Optional[date] = None
 
 # 建议模型 - 响应
 class RecommendationResponse(RecommendationBase):
@@ -157,6 +173,10 @@ class RecommendationResponse(RecommendationBase):
     user_id: int
     is_implemented: bool
     created_at: datetime
+    analysis_period: Optional[str] = None
+    analysis_start_date: Optional[date] = None
+    analysis_end_date: Optional[date] = None
+    source: Optional[str] = "rule_based"
 
     class Config:
         from_attributes = True
@@ -170,6 +190,12 @@ class TokenResponse(BaseModel):
 class TokenData(BaseModel):
     username: Optional[str] = None
 
+# 扩展能耗分析模式
+class EnergyAnalysisRequest(BaseModel):
+    period: AnalysisPeriod = AnalysisPeriod.current_month
+    start_date: Optional[date] = None
+    end_date: Optional[date] = None
+
 # 分析结果模型
 class EnergyAnalysis(BaseModel):
     total_consumption: float
@@ -178,6 +204,13 @@ class EnergyAnalysis(BaseModel):
     cost_analysis: float
     monthly_trend: List[dict]
     device_breakdown: List[dict]
+
+    # 新增字段
+    analysis_period: str
+    period_days: int
+    start_date: Optional[date] = None
+    end_date: Optional[date] = None
+    period_comparison: Optional[Dict] = None    # 与上个周期对比
 
 class BenchmarkComparison(BaseModel):
     user_consumption: float

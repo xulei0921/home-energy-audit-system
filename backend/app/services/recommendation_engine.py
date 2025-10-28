@@ -6,51 +6,85 @@ from typing import List
 from datetime import date, timedelta
 from . import data_processing as data_processing
 from ..crud import recommendations as recommendations_crud
+# from .ai_enhanced_recommendation_engine import AIEnhancedRecommendationEngine
 
 class RecommendationEngine:
     def __init__(self, db: Session, user_id: int):
         self.db = db
         self.user_id = user_id
 
-    def generate_recommendations(self) -> List[schemas.RecommendationCreate]:
-        """生成个性化节能建议"""
+    def generate_recommendations(
+            self,
+            period: schemas.AnalysisPeriod = schemas.AnalysisPeriod.current_month,
+            start_date: schemas.date = None,
+            end_date: schemas.date = None
+    ) -> List[schemas.RecommendationCreate]:
+        """生成个性化节能建议 - 支持多时间维度"""
+
         recommendations = []
 
         # 分析用户数据
-        analysis = data_processing.get_energy_analysis(self.db, self.user_id)
+        analysis = data_processing.get_energy_analysis(self.db, self.user_id, period, start_date, end_date)
         user = self.db.query(models.User).filter(models.User.id == self.user_id).first()
         devices = self.db.query(models.Device).filter(models.Device.user_id == self.user_id).all()
 
         # 基于基准比较的建议
         if analysis.comparison_with_benchmark > 20:
             recommendations.append(self._create_high_consumption_recommendation(
-                analysis.comparison_with_benchmark
+                analysis.comparison_with_benchmark,
+                analysis
             ))
 
         # 基于设备使用的建议
-        device_recommendation = self._generate_device_recommendations(devices, analysis)
+        device_recommendation = self._generate_device_recommendations(devices, analysis, period)
         recommendations.extend(device_recommendation)
 
         # 基于生活习惯的建议
-        lifestyle_recommendations = self._generate_lifestyle_recommendations(user, analysis)
+        lifestyle_recommendations = self._generate_lifestyle_recommendations(user, analysis, period)
         recommendations.extend(lifestyle_recommendations)
+
+        for rec in recommendations:
+            rec.analysis_period = analysis.analysis_period
+            rec.analysis_start_date = analysis.start_date
+            rec.analysis_end_date = analysis.end_date
+            rec.source = "rule_based"
 
         return recommendations
 
-    def _create_high_consumption_recommendation(self, excess_percentage: float) -> schemas.RecommendationCreate:
-        """创建高能耗警告建议"""
+    def _create_high_consumption_recommendation(
+            self,
+            excess_percentage: float,
+            energy_analysis: schemas.EnergyAnalysis
+    ) -> schemas.RecommendationCreate:
+        """创建高能耗警告建议 - 添加时间范围"""
+
+        from .ai_enhanced_recommendation_engine import AIEnhancedRecommendationEngine
+        time_range_desc = AIEnhancedRecommendationEngine._build_time_range_info(self,energy_analysis=energy_analysis)["description"]
+
         return schemas.RecommendationCreate(
             title="能耗偏高提醒",
             description=f"您的家庭能耗比相似家庭高出{excess_percentage:.1f}%。建议检查家中大功率电器的使用情况，并考虑优化用电习惯。",
             category=schemas.RecommendationCategory.lifestyle,
             estimated_saving=50.0,
-            estimate_cost_saving=25.0,
-            implementation_difficulty=schemas.DifficultyLevel.medium
+            estimated_cost_saving=25.0,
+            implementation_difficulty=schemas.DifficultyLevel.medium,
+            source="rule_based",
+            analysis_period=energy_analysis.analysis_period,
+            analysis_start_date=energy_analysis.start_date,
+            analysis_end_date=energy_analysis.end_date
         )
 
-    def _generate_device_recommendations(self, devices: List[schemas.DeviceResponse], analysis: schemas.EnergyAnalysis) -> List[schemas.RecommendationCreate]:
+    def _generate_device_recommendations(
+            self,
+            devices: List[schemas.DeviceResponse],
+            analysis: schemas.EnergyAnalysis,
+            period: schemas.AnalysisPeriod
+    ) -> List[schemas.RecommendationCreate]:
         """基于设备生成建议"""
         recommendations = []
+
+        from .ai_enhanced_recommendation_engine import AIEnhancedRecommendationEngine
+        time_range_desc = AIEnhancedRecommendationEngine._build_time_range_info(self, energy_analysis=analysis)["description"]
 
         # 分析高能耗设备
         high_consumption_devices = []
@@ -59,7 +93,15 @@ class RecommendationEngine:
                 item['consumption'] for item in analysis.device_breakdown
                 if item['device_name'] == device.name
             )
-            if device_consumption > 50:
+
+            # 根据分析周期的天数调整阈值
+            daily_threshold = 50  # 基础阈值
+            if analysis.period_days <= 30:  # 月度分析
+                threshold = daily_threshold * (analysis.period_days / 30)
+            else:  # 长期分析
+                threshold = daily_threshold * (analysis.period_days / 30) * 0.7  # 长期数据阈值稍低
+
+            if device_consumption > threshold:
                 high_consumption_devices.append((device, device_consumption))
 
         for device, consumption in high_consumption_devices:
@@ -71,7 +113,11 @@ class RecommendationEngine:
                     estimated_saving=consumption * 0.2,
                     estimated_cost_saving=consumption * 0.2 * 0.5,
                     implementation_difficulty=schemas.DifficultyLevel.low,
-                    device_id=device.id
+                    device_id=device.id,
+                    source="rule_based",
+                    analysis_period=analysis.analysis_period,
+                    analysis_start_date=analysis.start_date,
+                    analysis_end_date=analysis.end_date
                 ))
             elif device.device_type == models.DeviceType.water_heater:
                 recommendations.append(schemas.RecommendationCreate(
@@ -81,7 +127,8 @@ class RecommendationEngine:
                     estimated_saving=consumption * 0.15,
                     estimated_cost_saving=consumption * 0.15 * 0.5,
                     implementation_difficulty=schemas.DifficultyLevel.low,
-                    device_id=device.id
+                    device_id=device.id,
+                    source="rule_based"
                 ))
             elif device.device_type == models.DeviceType.refrigerator:
                 recommendations.append(schemas.RecommendationCreate(
@@ -91,7 +138,11 @@ class RecommendationEngine:
                     estimated_saving=consumption * 0.12,
                     estimated_cost_saving=consumption * 0.12 * 0.5,
                     implementation_difficulty=schemas.DifficultyLevel.low,
-                    device_id=device.id
+                    device_id=device.id,
+                    source="rule_based",
+                    analysis_period=analysis.analysis_period,
+                    analysis_start_date=analysis.start_date,
+                    analysis_end_date=analysis.end_date
                 ))
             elif device.device_type == models.DeviceType.television:
                 recommendations.append(schemas.RecommendationCreate(
@@ -101,7 +152,11 @@ class RecommendationEngine:
                     estimated_saving=consumption * 0.15,
                     estimated_cost_saving=consumption * 0.15 * 0.5,
                     implementation_difficulty=schemas.DifficultyLevel.low,
-                    device_id=device.id
+                    device_id=device.id,
+                    source="ruled_based",
+                    analysis_period=analysis.analysis_period,
+                    analysis_start_date=analysis.start_date,
+                    analysis_end_date=analysis.end_date
                 ))
             elif device.device_type == models.DeviceType.washing_machine:
                 recommendations.append(schemas.RecommendationCreate(
@@ -111,7 +166,11 @@ class RecommendationEngine:
                     estimated_saving=consumption * 0.2,  # 预计节省20%（基于行业数据）
                     estimated_cost_saving=consumption * 0.2 * 0.5,  # 按0.5元/kWh计算
                     implementation_difficulty=schemas.DifficultyLevel.low,
-                    device_id=device.id
+                    device_id=device.id,
+                    source="rule_based",
+                    analysis_period=analysis.analysis_period,
+                    analysis_start_date=analysis.start_date,
+                    analysis_end_date=analysis.end_date
                 ))
             elif device.device_type == models.DeviceType.lighting:
                 recommendations.append(schemas.RecommendationCreate(
@@ -121,7 +180,11 @@ class RecommendationEngine:
                     estimated_saving=consumption * 0.3,  # 预计节省30%（LED替换+习惯优化）
                     estimated_cost_saving=consumption * 0.3 * 0.5,
                     implementation_difficulty=schemas.DifficultyLevel.low,
-                    device_id=device.id
+                    device_id=device.id,
+                    source="rule_based",
+                    analysis_period=analysis.analysis_period,
+                    analysis_start_date=analysis.start_date,
+                    analysis_end_date=analysis.end_date
                 ))
             elif device.device_type == models.DeviceType.computer:
                 recommendations.append(schemas.RecommendationCreate(
@@ -131,14 +194,28 @@ class RecommendationEngine:
                     estimated_saving=consumption * 0.25,  # 预计节省25%（电源管理+习惯优化）
                     estimated_cost_saving=consumption * 0.25 * 0.5,
                     implementation_difficulty=schemas.DifficultyLevel.low,
-                    device_id=device.id
+                    device_id=device.id,
+                    source="rule_based",
+                    analysis_period=analysis.analysis_period,
+                    analysis_start_date=analysis.start_date,
+                    analysis_end_date=analysis.end_date
                 ))
 
         return recommendations
 
-    def _generate_lifestyle_recommendations(self, user: models.User, analysis: schemas.EnergyAnalysis) -> List[schemas.RecommendationCreate]:
+    def _generate_lifestyle_recommendations(
+            self,
+            user: models.User,
+            analysis: schemas.EnergyAnalysis,
+            period: schemas.AnalysisPeriod
+    ) -> List[schemas.RecommendationCreate]:
         """基于生活习惯生成建议"""
         recommendations = []
+
+        # 根据周期调整建议内容
+        period_note = f"(基于{analysis.analysis_period}数据)"
+        from .ai_enhanced_recommendation_engine import AIEnhancedRecommendationEngine
+        time_range_desc = AIEnhancedRecommendationEngine._build_time_range_info(self, energy_analysis=analysis)["description"]
 
         # 根据家庭规模和生活习惯给出建议
         if user.family_size >= 3:
@@ -148,7 +225,11 @@ class RecommendationEngine:
                 category=schemas.RecommendationCategory.lifestyle,
                 estimated_saving=30.0,
                 estimated_cost_saving=15.0,
-                implementation_difficulty=schemas.DifficultyLevel.medium
+                implementation_difficulty=schemas.DifficultyLevel.medium,
+                source="rule_based",
+                analysis_period=analysis.analysis_period,
+                analysis_start_date=analysis.start_date,
+                analysis_end_date=analysis.end_date
             ))
         # 根据房屋面积给出建议
         if user.house_size and user.house_size > 100:
@@ -158,7 +239,11 @@ class RecommendationEngine:
                 category=schemas.RecommendationCategory.lifestyle,
                 estimated_saving=40.0,
                 estimated_cost_saving=20.0,
-                implementation_difficulty=schemas.DifficultyLevel.medium
+                implementation_difficulty=schemas.DifficultyLevel.medium,
+                source="rule_based",
+                analysis_period=analysis.analysis_period,
+                analysis_start_date=analysis.start_date,
+                analysis_end_date=analysis.end_date
             ))
 
         # 通用建议
@@ -169,7 +254,8 @@ class RecommendationEngine:
                 category=schemas.RecommendationCategory.device_upgrade,
                 estimated_saving=15.0,
                 estimated_cost_saving=7.5,
-                implementation_difficulty=schemas.DifficultyLevel.low
+                implementation_difficulty=schemas.DifficultyLevel.low,
+                source="rule_based"
             ),
             schemas.RecommendationCreate(
                 title="待机功耗管理",
@@ -177,7 +263,11 @@ class RecommendationEngine:
                 category=schemas.RecommendationCategory.device_usage,
                 estimated_saving=10.0,
                 estimated_cost_saving=5.0,
-                implementation_difficulty=schemas.DifficultyLevel.low
+                implementation_difficulty=schemas.DifficultyLevel.low,
+                source="rule_based",
+                analysis_period=analysis.analysis_period,
+                analysis_start_date=analysis.start_date,
+                analysis_end_date=analysis.end_date
             )
         ])
 

@@ -4,7 +4,7 @@ from typing import List, Optional, Dict
 from .. import schemas, dependencies, models
 from ..database import get_db
 from ..crud import recommendations as recommendations_crud
-
+from datetime import date
 from ..services.ai_enhanced_recommendation_engine import AIEnhancedRecommendationEngine
 import logging
 
@@ -77,24 +77,36 @@ def mark_recommendation_implemented(
 async def generate_ai_recommendations(
         user_id: int,
         ai_provider: str = "tongyi",
-        background_tasks: BackgroundTasks = None,
+        period: schemas.AnalysisPeriod = schemas.AnalysisPeriod.current_month,
+        start_date: Optional[date] = None,
+        end_date: Optional[date] = None,
         db: Session = Depends(get_db)
 ):
     """使用AI生成节能建议"""
 
     try:
         engine = AIEnhancedRecommendationEngine(db, user_id, ai_provider)
-        ai_recommendations = await engine.generate_ai_recommendations()
+        ai_recommendations = await engine.generate_ai_recommendations(period, start_date, end_date)
 
         # 保存AI建议到数据库
         saved_recommendations = []
         for rec_data in ai_recommendations:
+            # 检查是否已存在类似建议
+            existing = db.query(models.Recommendation).filter(
+                models.Recommendation.user_id == user_id,
+                models.Recommendation.title == rec_data.title,
+                models.Recommendation.source == rec_data.source
+            ).first()
+
             # 标记为AI生成
-            db_rec = recommendations_crud.create_recommendation(db, rec_data, user_id)
-            db_rec.source = "ai_based"
-            db.commit()
-            db.refresh(db_rec)
-            saved_recommendations.append(db_rec)
+            if not existing:
+                db_rec = recommendations_crud.create_recommendation(db, rec_data, user_id)
+                db_rec.source = "ai_based"
+                db.commit()
+                db.refresh(db_rec)
+                saved_recommendations.append(db_rec)
+            else:
+                logger.info(f"跳过已存在的建议[{rec_data.source}]: {rec_data.title}")
 
         return saved_recommendations
 

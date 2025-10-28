@@ -88,9 +88,10 @@ class Recommendation(Base):
     created_at = Column(DateTime, default=func.now())
 
     # 新增字段
+    analysis_period = Column(String(50), comment="分析周期")
+    analysis_start_date = Column(Date, comment="分析开始日期")
+    analysis_end_date = Column(Date, comment="分析结束日期")
     source = Column(String(20), default="rule_based", comment="建议来源: rule_based, ai_based")  # 新增
-    confidence_score = Column(Float, default=1.0, comment="置信度评分")  # 新增
-    ai_analysis = Column(JSON, comment="AI分析元数据")  # 新增
 
 class EnergyBenchmark(Base):
     __tablename__ = "energy_benchmarks"

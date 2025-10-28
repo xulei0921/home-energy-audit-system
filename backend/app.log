@@ -43,3 +43,369 @@
 2025-10-28 10:23:34,573 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
 2025-10-28 10:23:34,573 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
 2025-10-28 10:23:34,582 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 3
+2025-10-28 10:28:11,347 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-28 14:21:27,695 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 14:22:35,756 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 14:22:54,765 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-07-30 到 2025-10-28, 天数: 91
+2025-10-28 14:22:59,156 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_6_months, 日期范围: 2025-05-01 到 2025-10-28, 天数: 181
+2025-10-28 14:27:47,869 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 14:28:08,389 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 14:28:27,453 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-07-30 到 2025-10-28, 天数: 91
+2025-10-28 14:31:24,682 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-07-30 到 2025-10-28, 天数: 91
+2025-10-28 14:32:29,751 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-07-30 到 2025-10-28, 天数: 91
+2025-10-28 14:35:26,570 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-07-30 到 2025-10-28, 天数: 91
+2025-10-28 14:36:51,160 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 14:36:55,237 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 14:37:05,667 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 14:37:09,724 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-07-30 到 2025-10-28, 天数: 91
+2025-10-28 14:38:03,040 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_6_months, 日期范围: 2025-05-01 到 2025-10-28, 天数: 181
+2025-10-28 14:38:12,930 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_year, 日期范围: 2025-01-01 到 2025-10-28, 天数: 301
+2025-10-28 14:38:23,126 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 14:38:25,948 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 14:38:40,165 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-28 14:43:52,130 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 14:43:52,130 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 14:43:52,130 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True
+2025-10-28 14:43:52,132 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 14:43:52,137 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到能耗分析数据: 总能耗0.0kWh
+2025-10-28 14:43:52,138 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 14:43:52,138 - app.services.tongyi_service - INFO - 分析提示词长度: 434
+2025-10-28 14:43:52,138 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 14:44:05,638 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 14:44:05,647 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '能耗数据存在明显异常，本月记录的总能耗和日均能耗为0.0 kWh，但空调设备却显示消耗288.0 kWh，数据逻辑不一致，可能为数据采集或传输错误。在正常情况下，单人居住的55平方米住宅在秋季应有适度能耗，尤其是存在空调使用的情况下。', 'key_insights': ['总能耗与设备能耗之间存在严重数据矛盾：空调单独耗电288.0 kWh，但家庭总能耗却为0.0 kWh，表明系统数据同步或计量模块存在故障。', '若以空调能耗为准，则该用户在秋季仍大量使用空调，可能由于区域气候波动或室内热源较多。', '日均能耗为0.0 kWh不符合实际生活需求，即使节能习惯良好，基础电器（如照明、冰箱、待机设备）也应产生一定能耗。', '电费估算为¥0进一步验证了数据记录异常，与设备级能耗不匹配。', '缺乏其他设备能耗分布信息，无法全面评估用电结构。'], 'efficiency_level': '低', 'main_consumption_sources': '空调（air_conditioner）报告能耗288.0 kWh，是唯一记录的耗电设备。若数据准确，空调为绝对主导能耗来源，占比超过100%（因总能耗为0），反映出极不合理的能耗结构，提示监测系统存在问题。', 'seasonal_impact': '秋季通常为温和过渡季节，空调使用频率较低。若确实发生288.0 kWh的空调能耗，则表明存在非典型高负荷制冷或制热需求，可能与建筑隔热性能差、设备老化或设定温度不合理有关。然而，结合总能耗为0的情况，更可能是季节性数据归集错误。'}
+2025-10-28 14:44:05,648 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 14:44:05,648 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1081
+2025-10-28 14:44:05,648 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 14:44:21,589 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 14:44:21,590 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '检查电表及能耗监测系统准确性', 'description': '联系电力公司或专业电工检查家庭总电表和智能监测设备是否正常工作，确认是否存在数据采集、传输或同步故障。重点排查空调独立计量回路与总表之间的逻辑一致性。', 'category': '设备升级', 'estimated_saving': 0.0, 'estimated_cost_saving': 0.0, 'implementation_difficulty': '中', 'reasoning': '当前总能耗为0而空调耗电288kWh存在严重数据矛盾，表明监测系统可能失效。修复后方可获取真实能耗数据，是后续所有节能措施的基础。'}, {'title': '校准空调运行时间与设定温度', 'description': '在确保监测系统正常的前提下，优化空调使用策略：避免长时间连续运行，设定合理温度（制冷26°C以上，制热20°C以下），并利用定时功能在无人时自动关闭。', 'category': '生活习惯', 'estimated_saving': 90.0, 'estimated_cost_saving': 45.0, 'implementation_difficulty': '低', 'reasoning': '若空调确实消耗288kWh，则占主导地位。秋季非高峰季节，通过行为调整可显著降低不必要的制冷/制热需求，预计节省30%空调能耗。'}, {'title': '加装门窗密封条提升建筑隔热性能', 'description': '为住宅门窗加装防风隔热密封条，减少室内外热量交换，降低空调因补偿热损失而产生的额外负荷，特别是在气候波动较大的秋季。', 'category': '设备升级', 'estimated_saving': 60.0, 'estimated_cost_saving': 30.0, 'implementation_difficulty': '中', 'reasoning': '秋季本不应高频率使用空调，若确有大量能耗，可能与房屋保温差有关。改善围护结构可减少空调启停次数，提高能效比，长期节能效果显著。'}, {'title': '启用待机设备电源管理并使用智能插座', 'description': '为电视、路由器、充电器等常开设备配置智能插座，设置夜间或离家时段自动断电，消除‘待机能耗’黑洞，并通过APP监控实际功耗。', 'category': '设备使用', 'estimated_saving': 20.0, 'estimated_cost_saving': 10.0, 'implementation_difficulty': '低', 'reasoning': '即使总表显示为0，基础待机负荷通常每月达20-50kWh。部署智能控制可精准识别隐形耗电，且成本低、操作简便，适合快速实施。'}]}
+2025-10-28 14:44:21,591 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 14:44:21,591 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 14:44:21,591 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 14:44:21,601 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 3
+2025-10-28 14:57:06,996 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 14:57:10,244 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 15:15:19,286 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 15:15:19,286 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 15:15:19,286 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 15:15:19,293 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 15:15:19,305 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到能耗分析数据: 总能耗513.0kWh
+2025-10-28 15:15:19,305 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 15:15:19,305 - app.services.tongyi_service - INFO - 分析提示词长度: 424
+2025-10-28 15:15:19,305 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 15:15:35,016 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 15:15:35,021 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭的能耗水平显著高于同类基准，尽管房屋面积较小且仅一人居住，但月度总能耗达到513.0 kWh，相当于基准值的503.5%，表明存在严重的能源使用效率问题或异常用电行为。', 'key_insights': ['日均能耗高达17.1 kWh，远超单人小户型家庭正常范围（通常为6–10 kWh）', '缺乏分项设备能耗数据，但高能耗可能源于空调、电热水器、老旧电器或长时间待机设备', '秋季节气温适中，理论上无需高强度供暖或制冷，当前能耗不符合季节性预期', '电费高达¥308，对于55㎡单人住宅属于异常高水平', '可能存在设备老化、保温性能差或用电习惯不良（如全天开启高功耗设备）等问题'], 'efficiency_level': '低', 'main_consumption_sources': '由于缺少具体设备分类数据，无法精确识别主要耗电设备。但基于高能耗模式推测：电热水器（长时间加热）、空调或取暖器（持续运行）、冰箱（老旧型号或频繁启停）、照明系统（长时开启）或待机功耗较大的电子设备群可能是主要来源。建议进行电路分项监测以定位确切负载。', 'seasonal_impact': '当前为秋季，气候温和，应处于全年能耗较低时期。然而该家庭能耗却处于高位，说明用电行为未随季节优化，可能存在过度依赖电加热或制冷设备的情况，缺乏季节性节能调节策略。'}
+2025-10-28 15:15:35,021 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 15:15:35,021 - app.services.tongyi_service - INFO - 建议生成提示词长度: 993
+2025-10-28 15:15:35,021 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 15:16:07,875 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 15:16:07,878 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '安装智能插座监控并优化电热水器运行时间', 'description': '在电热水器上加装智能插座，设定仅在早晨和晚间使用前1小时加热，避免全天保持高温。每天减少6小时待机加热时间。', 'category': '设备使用', 'estimated_saving': 120, 'estimated_cost_saving': 72, 'implementation_difficulty': '低', 'reasoning': '电热水器是家庭第二大耗电设备（仅次于空调），长时间持续加热会导致巨大能耗浪费。秋冬季若非即热式需求，定时加热可显著降低无效能耗。按日均减少6小时加热估算，每月可节省约120 kWh。'}, {'title': '检查并更换老旧冰箱或调整使用习惯', 'description': '确认冰箱型号能效等级，若为超过8年以上的老旧机型，建议更换为一级能效节能型号；若暂不更换，则确保门封严密、避免频繁开门、定期除霜，并将温度设置在冷藏4°C、冷冻-18°C。', 'category': '设备升级', 'estimated_saving': 80, 'estimated_cost_saving': 48, 'implementation_difficulty': '中', 'reasoning': '老旧冰箱日均耗电可达1.5–2 kWh，远高于新型节能机型的0.5 kWh以下。结合该户高能耗特征，冰箱可能是隐藏耗电大户。通过更换或优化使用，预计月节电80 kWh左右。'}, {'title': '实施空调与取暖设备的智能启停策略', 'description': '即使在秋季，若室内使用电暖器或空调制热，应避免24小时开启。采用定时关闭功能，睡眠时使用定时关机，白天外出即断电，回家前提前开启。', 'category': '生活习惯', 'estimated_saving': 90, 'estimated_cost_saving': 54, 'implementation_difficulty': '低', 'reasoning': '电暖器功率通常在1500–2000W，连续运行每日耗电15–20 kWh。分析显示当前季节不应有高强度供暖需求，推测存在过度使用情况。合理控制使用时间可大幅削减能耗。'}, {'title': '开展全屋待机功耗排查与电源管理', 'description': '对电视、机顶盒、路由器、电脑、充电器等长期插电设备进行清查，使用带开关的插线板集中控制，夜间或外出时统一断电。', 'category': '生活习惯', 'estimated_saving': 30, 'estimated_cost_saving': 18, 'implementation_difficulty': '低', 'reasoning': '现代家庭待机功耗可占总用电5–10%。对于本户异常高能耗状态，待机设备群可能贡献显著。通过切断非必要待机电源，保守估计每月可节省30 kWh。'}]}
+2025-10-28 15:16:07,878 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 15:16:07,878 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 15:16:07,878 - app.services.data_processing - INFO - 分析周期: None, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 15:16:07,891 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: "RecommendationCreate" object has no field "source"
+2025-10-28 15:16:07,891 - app.services.data_processing - INFO - 分析周期: None, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 15:16:07,899 - app.routers.recommendations - ERROR - AI建议生成失败: "RecommendationCreate" object has no field "source"
+2025-10-28 15:20:01,532 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 15:20:01,533 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 15:20:01,533 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 15:20:01,541 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 15:20:01,552 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到能耗分析数据: 总能耗513.0kWh
+2025-10-28 15:20:01,553 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 15:20:01,553 - app.services.tongyi_service - INFO - 分析提示词长度: 424
+2025-10-28 15:20:01,553 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 15:20:22,968 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 15:20:22,974 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准，尽管房屋面积较小且仅一人居住，但月度总能耗达到513.0 kWh，日均17.1 kWh，电费高达¥308，能效表现较差。存在明显的节能优化空间。', 'key_insights': ['月均能耗为基准值的503.5%，远超同类家庭正常范围，表明用电行为或设备效率存在异常。', '缺乏具体设备能耗分布数据，但高能耗可能源于空调、电热水器、电暖器或老旧低效电器的持续运行。', '日均能耗达17.1 kWh，在单人居住的小户型中属于极高水平，提示可能存在长时间待机、过度使用大功率电器或保温性能差的问题。', '秋季本应是温和季节，采暖或制冷需求较低，如此高能耗暗示非必要用电占比过高。', '电费支出偏高，反映电价结构或高峰时段用电比例可能较高。'], 'efficiency_level': '低', 'main_consumption_sources': '由于缺少详细的分项计量数据，主要能耗来源推测如下：最可能为电采暖设备（如电暖器）或空气源热泵在换季期间频繁启停；其次是生活热水加热设备（如储水式电热水器）持续保温耗电；此外，照明系统若使用传统灯具、家电待机功耗累积以及冰箱等24小时运行设备老化也可能贡献较大比例能耗。', 'seasonal_impact': '秋季气温适中，理论上应处于全年用电低谷期。然而当前能耗水平接近冬季取暖高峰期，说明季节性优势未被体现，反而出现反常高耗电现象，极有可能因建筑隔热性能不佳导致室内温度波动大，促使温控设备反复工作，或用户在此季节错误启用了高功率加热装置。'}
+2025-10-28 15:20:22,974 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 15:20:22,974 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1080
+2025-10-28 15:20:22,974 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 15:20:46,024 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 15:20:46,026 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '检查并优化电采暖设备使用', 'description': '立即排查是否在秋季持续使用电暖器或空调制热模式。若确需取暖，建议设定恒温18-20℃，避免长时间满负荷运行，并在无人时关闭电源。', 'category': '设备使用', 'estimated_saving': 200, 'estimated_cost_saving': 120, 'implementation_difficulty': '低', 'reasoning': '分析指出高能耗可能源于非必要的电采暖设备运行。秋季气温适宜，通常无需持续加热。合理控制启停时间与温度可显著降低无效能耗。'}, {'title': '调整电热水器运行策略', 'description': '将储水式电热水器温度设定为55℃，并在每日固定洗浴时间前1小时开启，使用后立即关闭电源，避免全天保温造成的能量损耗。', 'category': '生活习惯', 'estimated_saving': 90, 'estimated_cost_saving': 54, 'implementation_difficulty': '中', 'reasoning': '电热水器持续保温是常见隐形耗电源，尤其在小户型单人居住情况下更易造成浪费。通过定时使用可大幅减少待机和重复加热损失。'}, {'title': '更换老旧电器并加装智能插座', 'description': '对使用超过8年的冰箱、空调等24小时运行电器进行能效评估，优先更换为一级能效产品；同时为所有非必要常开设备（如电视、路由器）加装智能插座，设置夜间自动断电。', 'category': '设备升级', 'estimated_saving': 70, 'estimated_cost_saving': 42, 'implementation_difficulty': '高', 'reasoning': '老旧电器效率衰减严重，且待机功耗累积可观。智能管理可消除‘ phantom load ’（幽灵负载），长期节能效果显著，尤其适用于缺乏分项计量的家庭。'}, {'title': '改善房屋保温性能', 'description': '检查门窗密封性，加装防风门缝条和厚窗帘以减少热量流失；若条件允许，在墙体或窗户加装简易隔热材料，降低因室温波动导致的温控设备频繁启动。', 'category': '设备升级', 'estimated_saving': 60, 'estimated_cost_saving': 36, 'implementation_difficulty': '中', 'reasoning': '分析提示建筑保温差可能导致温控设备反复工作。提升隔热性能可稳定室内温度，减少空调/采暖设备的无效启停，特别适合换季期间节能。'}]}
+2025-10-28 15:20:46,027 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 15:20:46,027 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 15:20:46,027 - app.services.data_processing - INFO - 分析周期: None, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 15:20:46,039 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 3
+2025-10-28 15:20:46,087 - app.routers.recommendations - INFO - 跳过已存在的建议[rule_based]: 优化空调使用
+2025-10-28 15:20:46,087 - app.routers.recommendations - INFO - 跳过已存在的建议[rule_based]: 使用节能灯具
+2025-10-28 15:20:46,089 - app.routers.recommendations - INFO - 跳过已存在的建议[rule_based]: 待机功耗管理
+2025-10-28 15:23:37,313 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 15:23:52,556 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 15:29:35,623 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-28 15:37:21,877 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 15:37:21,877 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 15:37:21,877 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 15:37:21,879 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 15:37:21,886 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到能耗分析数据: 总能耗439.0kWh
+2025-10-28 15:37:21,887 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 15:37:21,887 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 15:37:21,887 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 15:38:01,083 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 15:38:01,084 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准值，整体能效表现较差。尽管为单人居住且房屋面积较小，但月度总能耗达到439.0 kWh，约为同类家庭平均值的4.17倍，存在明显的节能优化空间。', 'key_insights': ['空调系统是最大能耗设备，占总用电量的56.9%，在秋季使用如此高电量表明可能存在温度设定不合理或设备老化问题。', '冰箱日均运行能耗较高（约4.8 kWh/天），对于55平方米小户型而言，可能使用的是能效等级较低的老式冰箱。', '热水器能耗占比10.2%，处于合理范围，但仍可优化加热时段以避开高峰电价。', '无其他电器细分数据，可能存在‘隐形负载’如待机功耗或照明系统效率低下未被识别。', '日电耗达14.6 kWh，远超同类型家庭平均水平，反映用电习惯有待改善。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'analysis': '空调在秋季耗电高达250 kWh，极可能因设定温度过低、长时间连续运行或设备制冷效率下降所致，建议检查温控设置并考虑清洁或更换高效机型。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'analysis': '冰箱日均耗电4.8 kWh，明显偏高，推测为非一级能效产品或密封性差、频繁开关门导致压缩机持续工作，建议进行能效检测或更换新型节能冰箱。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'analysis': '热水器能耗相对合理，若为电储水式，建议调整加热时间为谷电时段，并降低保温温度至55℃左右以减少热损。'}}, 'seasonal_impact': '秋季气温适中，通常应为家庭能耗较低的季节，空调和采暖需求均较弱。然而该户空调能耗异常突出，说明季节性优势未被利用，反而出现反常高耗电行为，可能与用户偏好低温环境或设备自动模式误设有关。'}
+2025-10-28 15:38:01,085 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 15:38:01,085 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1429
+2025-10-28 15:38:01,085 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 15:38:21,177 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 15:38:21,178 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '调整空调温度设定并缩短运行时间', 'description': '将空调制冷温度从可能的过低设定（如22°C以下）调高至26°C，并避免全天连续运行。建议仅在需要时开启，关闭后利用自然通风降温。', 'category': '生活习惯', 'estimated_saving': 90, 'estimated_cost_saving': 45, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗56.9%（250 kWh/月），远高于正常秋季使用水平。根据能效研究，每调高1°C可节省约6-8%制冷能耗，结合减少使用时长，预计可降低36%空调能耗。'}, {'title': '清洁空调滤网并检查制冷系统性能', 'category': '设备使用', 'description': '定期清洗空调室内机滤网（建议每月一次），并请专业人员检测制冷剂压力和压缩机效率，确保设备处于高效工作状态。', 'estimated_saving': 30, 'estimated_cost_saving': 15, 'implementation_difficulty': '中', 'reasoning': '老旧或未维护的空调制冷效率下降可达20%-30%。当前空调在秋季仍高负荷运行，可能存在堵塞或制冷不良问题，导致能耗异常升高。'}, {'title': '更换为一级能效节能冰箱', 'description': '将现有高耗电冰箱（日均4.8 kWh）更换为符合国家一级能效标准的新款节能冰箱，典型功耗可降至1.5 kWh/天以下。', 'category': '设备升级', 'estimated_saving': 100, 'estimated_cost_saving': 50, 'implementation_difficulty': '高', 'reasoning': '当前冰箱月耗电144 kWh，约为同容量新型节能机型的3倍以上。更换后可显著降低基础负载，投资回收期约2-3年，长期节能效益显著。'}, {'title': '优化热水器加热时段并降低保温温度', 'description': '若使用电储水式热水器，将其定时加热功能设置在夜间谷电时段（如23:00-7:00），并将保温温度由默认65°C下调至55°C，减少热损失。', 'category': '设备使用', 'estimated_saving': 9, 'estimated_cost_saving': 4.5, 'implementation_difficulty': '低', 'reasoning': '热水器当前能耗占比10.3%（45 kWh/月）。降低温度可减少约15% standby loss，配合峰谷电价策略，进一步提升经济性。'}]}
+2025-10-28 15:38:21,178 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 15:38:21,178 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 15:38:21,178 - app.services.data_processing - INFO - 分析周期: None, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 15:38:21,188 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 3
+2025-10-28 15:38:56,711 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 16:10:57,912 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 16:10:57,912 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 16:10:57,913 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.current_month
+2025-10-28 16:10:57,920 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 16:10:57,933 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到本月分析能耗分析数据: 总能耗0.0kWh
+2025-10-28 16:10:57,933 - app.services.ai_enhanced_recommendation_engine - WARNING - 能耗数据为零或无效，无法生成AI建议
+2025-10-28 16:10:57,933 - app.services.ai_enhanced_recommendation_engine - INFO - 生成回退建议（数据不足）
+2025-10-28 16:27:29,936 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-28 20:35:28,704 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:35:44,225 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-28 20:37:59,722 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-28 20:38:13,789 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 20:38:13,789 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 20:38:13,789 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 20:38:13,791 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:38:13,803 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 20:38:13,803 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 20:38:13,804 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 20:38:13,804 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 20:38:36,389 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:38:36,397 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准值，整体能效表现较差。尽管房屋面积较小且为单人居住，但月度总能耗达到439.0 kWh，约为同类家庭平均值的4.17倍，存在较大的节能优化空间。', 'key_insights': ['空调是最大能耗设备，占总能耗的56.9%，在秋季使用强度过高，可能存在过度制冷或温度设定不合理的情况。', '冰箱日均运行能耗较高，达4.8 kWh/天，在同类设备中偏高，可能与设备老化、密封不良或频繁开启有关。', '热水器能耗占比10.2%，属于正常范围，但仍可优化使用时段以避开高峰电价。', '日均能耗高达14.6 kWh，远超同类型家庭平均水平，反映用电习惯有待改善。', '缺乏其他主要电器（如照明、洗衣机等）的能耗数据，可能存在未被监控的潜在耗电设备。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'assessment': '严重偏高，秋季应减少使用频率或调整至自然通风模式'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'assessment': '偏高，建议检查设备能效等级和运行状态'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'assessment': '合理范围内，可进一步通过定时加热节能'}}, 'seasonal_impact': '秋季气温适中，理论上应处于全年能耗较低的季节。然而空调仍为主要负荷，表明用户可能维持较低室内温度设定，导致不必要的能源消耗。季节性节能潜力大，建议利用自然通风替代空调制冷。'}
+2025-10-28 20:38:36,397 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 20:38:36,398 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1299
+2025-10-28 20:38:36,398 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 20:39:11,220 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:39:11,221 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用时段与温度设定', 'description': '将空调温度设定从当前可能偏低的值（如22°C以下）调整至26°C，并在早晚气温较低时关闭空调，改用自然通风。每日减少空调运行时间4小时以上。', 'category': '设备使用', 'estimated_saving': 100.0, 'estimated_cost_saving': 50.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗的56.9%（250kWh/月），秋季气温适宜，过度制冷导致显著浪费。根据ASHRAE建议，26°C为舒适且节能的制冷设定温度，结合自然通风可大幅降低负荷。'}, {'title': '检查并维护冰箱密封性与散热系统', 'description': '清洁冰箱冷凝器灰尘，检查门封条是否老化漏气，必要时更换密封条；避免频繁开门和长时间开门操作，确保每次关闭严密。', 'category': '设备使用', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电4.8kWh（144kWh/月），远高于同类高效型号的平均水平（约2.5kWh/天）。密封不良或散热不佳会导致压缩机持续高负荷运行，定期维护可提升效率15%-30%。'}, {'title': '为热水器设置定时加热模式', 'description': '将热水器设定为每天固定时间段加热（如傍晚17:00-19:00），避开用电高峰时段，同时减少全天候保温带来的热损失和重复加热。', 'category': '生活习惯', 'estimated_saving': 13.5, 'estimated_cost_saving': 6.8, 'implementation_difficulty': '中', 'reasoning': '热水器月耗电45kWh，虽处于合理范围，但持续保温会造成待机能耗。通过定时控制可减少无效加热周期，预计节能约30%，尤其配合峰谷电价更经济。'}, {'title': '评估冰箱能效并考虑升级至一级能效型号', 'description': '若冰箱使用年限超过8年，建议更换为一级能效变频冰箱。新机型日均功耗可降至1.8kWh以下，显著降低基础负载。', 'category': '设备升级', 'estimated_saving': 90.0, 'estimated_cost_saving': 45.0, 'implementation_difficulty': '高', 'reasoning': '老旧冰箱能效衰减明显，当前冰箱月耗144kWh相当于一台老式定频产品水平。新型一级能效冰箱年省电可达300kWh以上，投资回收期约3-5年，长期效益显著。'}]}
+2025-10-28 20:39:11,222 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 20:39:11,222 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 20:39:11,222 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:39:11,233 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: AIEnhancedRecommendationEngine._build_time_range_info() missing 1 required positional argument: 'energy_analysis'
+2025-10-28 20:39:11,233 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:39:11,241 - app.routers.recommendations - ERROR - AI建议生成失败: AIEnhancedRecommendationEngine._build_time_range_info() missing 1 required positional argument: 'energy_analysis'
+2025-10-28 20:42:11,963 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 20:42:11,963 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 20:42:11,963 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 20:42:11,972 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:42:11,985 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 20:42:11,985 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 20:42:11,986 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 20:42:11,986 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 20:42:37,580 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:42:37,587 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准值，整体能效表现较差。尽管为单人居住且房屋面积较小，但月度总能耗高达439.0 kWh，约为同类家庭平均值的4.17倍，存在较大的节能优化空间。', 'key_insights': ['空调是最大能耗设备，占总用电量的56.9%，在秋季使用如此高电量值得警惕，可能存在过度制冷或设备老化问题。', '冰箱日均运行能耗较高（约4.8 kWh/天），对于现代中等容量冰箱而言偏高，可能与设备能效等级低、密封不良或频繁开启有关。', '热水器能耗相对合理，仅占总用电的10.2%，符合单人小户型日常使用预期。', '日电均耗电量达14.6 kWh，远超同类型家庭平均水平，反映整体用电效率低下。', '缺乏其他主要电器（如照明、洗衣机、厨房电器）的能耗数据，可能意味着监测不完整或存在未计入的高耗电设备。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'assessment': '严重偏高，秋季气温适宜，空调不应成为主导负载，建议检查设定温度、使用时长及设备健康状态。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'assessment': '偏高，需排查是否为老旧型号（如非一级能效）、散热不良或门封漏冷等问题。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.2, 'assessment': '处于正常范围，可进一步通过定时加热和降低保温温度实现微优化。'}}, 'seasonal_impact': '秋季通常属于过渡季节，供暖和制冷需求较低，理想情况下总能耗应明显低于夏季和冬季。然而该家庭空调仍消耗大量电力，表明可能存在不必要的制冷行为或温控策略不当，未能充分利用自然通风降温，季节适应性差。'}
+2025-10-28 20:42:37,588 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 20:42:37,588 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1382
+2025-10-28 20:42:37,588 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 20:43:24,912 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:43:24,913 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用习惯并检查设备运行状态', 'description': '将空调设定温度从可能的过低值（如低于24℃）调整至推荐范围（26–28℃），关闭无人时的制冷，并检查滤网清洁度、制冷剂状态及是否频繁启停。若设备老旧，考虑提前规划更换。', 'category': '设备使用', 'estimated_saving': 100.0, 'estimated_cost_saving': 50.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗56.9%（250kWh/月），远高于秋季合理水平。通过行为调整和基础维护可显著降低无效制冷，参考同类家庭在过渡季节空调能耗通常低于50kWh/月。'}, {'title': '排查冰箱高能耗原因并改善使用方式', 'description': '检查冰箱门封条密封性，清理背部散热器灰尘，避免热食直接放入，并减少频繁开门次数和时间。同时确认设备能效等级，若为三级或以下老型号建议列入更换计划。', 'category': '生活习惯', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电4.8kWh（约144kWh/月）超出同容量一级能效产品平均水平（约2.0–3.0kWh/天）。密封不良或散热不佳可导致能耗上升30%-50%，简单维护即可带来明显改善。'}, {'title': '启用热水器定时功能避免全天保温', 'description': '设置热水器仅在使用前1小时加热（如早晨7:00–8:00，晚上19:00–21:00），其余时间断电或处于待机模式，减少反复加热造成的热损失。', 'category': '设备使用', 'estimated_saving': 15.0, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '中', 'reasoning': '当前热水器月耗电45kWh虽属正常，但持续保温会导致 standby losses（待机损耗）。采用定时控制可节能20%-30%，尤其适合单人固定用水习惯的小户型。'}, {'title': '评估并更换高能效等级的节能型冰箱', 'description': '选用一级能效、变频技术的新款冰箱替换现有设备，优先选择匹配实际需求容量（建议200–300L），提升整体能效表现。', 'category': '设备升级', 'estimated_saving': 60.0, 'estimated_cost_saving': 30.0, 'implementation_difficulty': '高', 'reasoning': '老旧冰箱能效可能仅为新一级产品的1/2甚至更低。以年耗电量为例，旧机可达1000kWh以上，而新型号可控制在400kWh以内，更换后预计节能40%以上，投资回收期约3–5年。'}, {'title': '加装分路用电监测装置以识别潜在高耗电设备', 'description': '安装支持回路级监控的智能电表或插座，对厨房电器、照明、充电设备等进行分类能耗追踪，发现隐藏负载或异常功耗设备。', 'category': '设备升级', 'estimated_saving': 20.0, 'estimated_cost_saving': 10.0, 'implementation_difficulty': '中', 'reasoning': '当前分析缺失其他电器数据，可能存在未被识别的高耗电设备（如即热式小厨宝、老化水泵、长时间待机设备群）。精准监测有助于定位问题源，实现针对性优化。'}]}
+2025-10-28 20:43:24,913 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 5
+2025-10-28 20:43:24,913 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 5
+2025-10-28 20:43:24,914 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:43:24,923 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: AIEnhancedRecommendationEngine._build_time_range_info() missing 1 required positional argument: 'energy_analysis'
+2025-10-28 20:43:24,924 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:43:24,931 - app.routers.recommendations - ERROR - AI建议生成失败: AIEnhancedRecommendationEngine._build_time_range_info() missing 1 required positional argument: 'energy_analysis'
+2025-10-28 20:48:31,259 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 20:48:31,260 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 20:48:31,260 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 20:48:31,268 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:48:31,282 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 20:48:31,282 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 20:48:31,283 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 20:48:31,283 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 20:48:57,009 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:48:57,015 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准值，整体能效表现较差。尽管为单人居住且房屋面积较小，但月度总能耗达到439.0 kWh，约为同类家庭平均值的4.17倍，存在明显的节能优化空间。', 'key_insights': ['空调是最大能耗设备，占总用电量的56.9%，在秋季使用如此高电量值得警惕，可能存在过度制冷或设备老化问题。', '冰箱日均耗电约4.8 kWh，远高于普通节能冰箱（通常2-3 kWh/天），可能为老旧型号或密封性能差导致持续高负荷运行。', '热水器能耗占比10.2%，属于合理范围，但仍可优化使用时段以避开高峰电价。', '日均能耗达14.6 kWh，远超同类型家庭平均水平（约3-5 kWh），表明用电习惯有待改善。', '缺乏其他电器（如照明、电视、电脑）的明细数据，暗示可能存在未被监控的隐性耗电设备或线路损耗。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'assessment': '严重偏高，秋季空调应处于低频使用状态，此能耗提示可能存在设定温度过低、长时间运行或设备效率下降问题。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'assessment': '明显偏高，建议检查冰箱年限、温控设置及门封气密性，考虑更换为一级能效产品以降低长期能耗。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'assessment': '处于正常区间，若为电热水器，建议采用定时加热模式，减少保温能耗。'}}, 'seasonal_impact': '秋季气温适中，理论上应为家庭能耗较低的季节，尤其是空调和采暖设备使用减少。然而该家庭空调仍消耗250 kWh，说明季节性优势未体现，反而出现反常高能耗，可能与用户习惯（如夜间低温制冷）或设备控制不当有关。'}
+2025-10-28 20:48:57,015 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 20:48:57,015 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1408
+2025-10-28 20:48:57,015 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 20:49:39,739 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:49:39,740 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用习惯并调整设定温度', 'description': '将空调设定温度从可能过低的水平（如低于24℃）提高至26-28℃，尤其是在夜间和无人时关闭或启用定时模式。避免在秋季进行长时间制冷。', 'category': '生活习惯', 'estimated_saving': 100.0, 'estimated_cost_saving': 50.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗的56.9%（250 kWh/月），远高于秋季合理使用水平。适当调高设定温度可显著减少运行时间，据测算节能潜力可达40%以上，且无需任何设备更换。'}, {'title': '检查并更换高耗能冰箱', 'description': '对现有冰箱进行能效检测，重点检查门封气密性、温控设置及冷凝器积尘情况；若设备使用超过8年，建议更换为一级能效节能型号。', 'category': '设备升级', 'estimated_saving': 60.0, 'estimated_cost_saving': 30.0, 'implementation_difficulty': '中', 'reasoning': '当前冰箱日均耗电4.8 kWh（约144 kWh/月），显著高于同容量节能产品（2-3 kWh/天）。更换为高效型号后预计可降低40%-50%制冷能耗，投资回收期约2-3年。'}, {'title': '为空调加装智能插座或定时控制器', 'description': '安装支持定时开关的智能插座，设置空调仅在需要时段运行（如晚间前两小时开启），防止整夜运行或忘记关闭。', 'category': '设备使用', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '秋季本不应频繁使用空调，但实际能耗高达250 kWh，表明存在长时间待机或误开启现象。通过智能控制减少无效运行时间，保守估计可节省10%-15%空调能耗。'}, {'title': '实施热水器分时加热策略', 'description': '若使用电热水器，将其设置为在用电低谷时段（如夜间23:00-7:00）加热，并配合保温功能减少白天反复加热造成的能量损失。', 'category': '生活习惯', 'estimated_saving': 9.0, 'estimated_cost_saving': 4.5, 'implementation_difficulty': '低', 'reasoning': '热水器月耗电45 kWh，虽处于正常范围，但通过错峰加热和减少保温维持时间，仍可节约约20%相关能耗，同时有助于降低电费支出。'}]}
+2025-10-28 20:49:39,741 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 20:49:39,741 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 20:49:39,741 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:49:39,752 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: AIEnhancedRecommendationEngine._build_time_range_info() missing 1 required positional argument: 'self'
+2025-10-28 20:49:39,752 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:49:39,762 - app.routers.recommendations - ERROR - AI建议生成失败: AIEnhancedRecommendationEngine._build_time_range_info() missing 1 required positional argument: 'self'
+2025-10-28 20:51:09,503 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 20:51:09,503 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 20:51:09,503 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 20:51:09,509 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:51:09,523 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 20:51:09,523 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 20:51:09,523 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 20:51:09,524 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 20:51:45,151 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:51:45,155 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准值，整体能效表现较差。尽管房屋面积较小且仅一人居住，但月度总能耗达到439.0 kWh，约为同类家庭平均值的4.17倍，存在较大的节能优化空间。', 'key_insights': ['空调是最大能耗设备，占总用电量的56.9%，在秋季使用强度过高，可能存在设定温度过低或运行时间过长的问题。', '冰箱日均耗电约4.8 kWh，远高于常规节能型号的日均1.0–2.0 kWh水平，可能设备老化、密封不良或频繁开启导致能耗上升。', '热水器能耗占比10.2%，属于合理范围，但仍可优化使用时段以避开高峰电价。', '单人居住的小户型家庭日均14.6 kWh用电明显偏高，反映出用电习惯有待改善，如长时间开启空调或电器待机功耗管理不足。', '与基准相比能耗高出416.5%，表明该家庭处于高耗电状态，需立即采取节能措施。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'analysis': '空调在秋季仍消耗大量电力，推测可能是用于除湿或持续制冷，建议检查温控设置（建议不低于26℃），并考虑改用风扇或自然通风方式调节体感温度。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'analysis': '冰箱能耗异常偏高，可能由于设备能效等级较低（如超过10年老机型）、门封条老化漏冷、频繁开门或散热环境不佳所致，建议进行维护检测或更换为一级能效产品。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'analysis': '热水器能耗处于正常区间，若为电热水器，建议改为峰谷电价低谷时段加热，并缩短保温时间以进一步节能。'}}, 'seasonal_impact': '秋季气温适中，通常为全年能耗较低的季节之一。然而该家庭空调仍高强度运行，说明未根据季节变化调整使用策略，导致本应下降的能耗不降反升，季节适应性差。'}
+2025-10-28 20:51:45,155 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 20:51:45,157 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1445
+2025-10-28 20:51:45,157 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 20:52:02,947 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 20:52:02,949 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用温度和时长', 'description': '将空调设定温度从当前可能偏低的水平提升至26℃以上，每提高1℃可降低约6%制冷能耗。同时避免全天运行，建议在需要时开启，并优先使用风扇或开窗通风调节体感温度。', 'category': '生活习惯', 'estimated_saving': 75.0, 'estimated_cost_saving': 37.5, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗56.9%，秋季气温适宜，过度制冷是主要浪费源。适当调高温度并减少运行时间可在不影响舒适度的前提下显著节能。'}, {'title': '检查并维护冰箱门封条与散热系统', 'description': '清洁冰箱冷凝器灰尘，检查门封条是否老化漏气（可通过纸张夹持测试），确保关门严密。改善周围通风环境，避免紧贴墙壁或阳光直射。', 'category': '设备使用', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电4.8 kWh远超正常范围，密封不良或散热不佳会导致压缩机频繁启动，增加无效能耗，简单维护即可带来明显改善。'}, {'title': '更换为一级能效节能冰箱', 'description': '若冰箱使用超过8-10年，建议更换为新型一级能效变频冰箱，新机型日均功耗可控制在1.2 kWh以内，大幅降低基础负荷。', 'category': '设备升级', 'estimated_saving': 100.0, 'estimated_cost_saving': 50.0, 'implementation_difficulty': '高', 'reasoning': '老旧冰箱能效衰减严重，即使维护后仍难达到现代产品水平。更换后月均可节电超百千瓦时，长期经济效益显著，尤其适合持续高负载运行场景。'}, {'title': '调整热水器定时加热时段至夜间低谷电价期', 'description': '若使用储水式电热水器，设置定时器在夜间22:00至次日6:00低谷电价时段加热，避免白天高峰用电，并缩短保温时间以减少热损失。', 'category': '设备使用', 'estimated_saving': 9.0, 'estimated_cost_saving': 4.5, 'implementation_difficulty': '中', 'reasoning': '虽然热水器能耗占比合理，但通过时段优化可进一步节约电费支出，尤其适用于执行峰谷电价的家庭用户，投资小、回报快。'}]}
+2025-10-28 20:52:02,949 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 20:52:02,950 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 20:52:02,950 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:52:02,962 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 20:52:02,962 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 20:52:02,972 - app.routers.recommendations - ERROR - AI建议生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:15:00,270 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 21:15:06,864 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-07-30 到 2025-10-28, 天数: 91
+2025-10-28 21:15:13,347 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_6_months, 日期范围: 2025-05-01 到 2025-10-28, 天数: 181
+2025-10-28 21:15:34,419 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-28 21:16:17,236 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 21:16:17,236 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 21:16:17,236 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.current_month
+2025-10-28 21:16:17,237 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-28, 天数: 28
+2025-10-28 21:16:17,244 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到本月分析能耗分析数据: 总能耗0.0kWh
+2025-10-28 21:16:17,244 - app.services.ai_enhanced_recommendation_engine - WARNING - 能耗数据为零或无效，无法生成AI建议
+2025-10-28 21:16:17,244 - app.services.ai_enhanced_recommendation_engine - INFO - 生成回退建议（数据不足）
+2025-10-28 21:17:47,634 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 21:17:47,635 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 21:17:47,635 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 21:17:47,637 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:17:47,643 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 21:17:47,643 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 21:17:47,643 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 21:17:47,643 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 21:18:03,003 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:18:03,005 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准，尽管房屋面积较小且仅一人居住，但总能耗达到439.0 kWh，约为同类家庭平均值的4.17倍，表明存在明显的能效问题或用电习惯不合理。', 'key_insights': ['空调是最大能耗设备，占总能耗的56.9%，在秋季使用如此高电量值得警惕，可能存在过度制冷或设备老化导致效率下降。', '冰箱日均耗电约4.8 kWh，远高于标准节能型号的日均0.5–1.5 kWh范围，可能为老旧型号、密封不良或频繁开启所致。', '热水器能耗占比10.2%，属于合理范围，但仍可优化使用时段以避开高峰电价。', '单人居住的小户型家庭月均能耗通常在100–150 kWh之间，而本用户达439 kWh，超出正常水平近三倍。', '缺乏其他电器（如照明、电视、电脑）的明细数据，但其总和仅占总能耗的约5%，数值偏低，可能存在数据采集遗漏或计量偏差。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'analysis': '在秋季仍消耗大量电力，推测可能是变频性能差、设定温度过低、运行时间过长或用于除湿。建议检查温控设置和设备状态。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'analysis': '能耗异常偏高，可能由于压缩机老化、门封不严、环境散热不良或容积过大造成持续高负荷运行。建议进行能效检测并考虑更换为一级能效产品。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'analysis': '电热水器每日耗电约1.5 kWh，若为储水式且容量适中，则处于中等偏高水平，建议启用定时加热模式以减少待机损耗。'}}, 'seasonal_impact': '秋季气温宜人，通常无需频繁使用空调或取暖设备，因此整体家庭能耗应处于全年较低水平。然而该用户空调能耗高达250 kWh，明显违背季节规律，反映出非必要的空调使用或系统控制失当，削弱了季节性节能潜力。'}
+2025-10-28 21:18:03,005 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 21:18:03,005 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1466
+2025-10-28 21:18:03,006 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 21:18:22,402 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:18:22,403 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用习惯并检查设备状态', 'description': '将空调设定温度从可能的过低值（如22°C以下）调整至秋季推荐范围26–28°C，避免长时间连续运行。关闭无人时的空调，利用自然通风降温。同时检查滤网清洁度、出风效率及是否频繁启停，判断是否存在老化或控制故障。', 'category': '设备使用', 'estimated_saving': 120.0, 'estimated_cost_saving': 60.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗56.9%（250 kWh），远高于季节合理水平。通过行为调整可显著减少无效制冷，预计节能40%-50%，尤其在秋季温和气候下自然冷却潜力大。'}, {'title': '更换老旧冰箱为一级能效型号', 'description': '将当前日均耗电4.8 kWh的冰箱替换为一级能效节能型号（日均约0.8 kWh）。选择容量匹配单人使用的中小型冰箱（150–200L），确保良好散热安装环境。', 'category': '设备升级', 'estimated_saving': 120.0, 'estimated_cost_saving': 60.0, 'implementation_difficulty': '高', 'reasoning': '现冰箱月耗电144 kWh，是正常值的3-5倍，极可能是压缩机老化或密封失效所致。更换后预计节能70%以上，长期效益显著，虽初期投入较高但1-2年可回收成本。'}, {'title': '启用热水器定时加热功能', 'description': '设置电热水器仅在用水前1小时自动加热（如早晨7:00–8:00和晚上19:00–20:00），其余时间断电或保温，避免全天候维持高温导致反复加热损耗。', 'category': '生活习惯', 'estimated_saving': 15.0, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '中', 'reasoning': '当前热水器月耗电45 kWh处于偏高水平，定时控制可减少待机和反复加热损失，预计节省20%-30%热水能耗，且不影响使用体验。'}, {'title': '全面检测冰箱密封性与散热条件', 'description': '进行冰箱门封密闭测试（夹纸法），清理背部冷凝器灰尘，确保周围留有10cm以上散热空间，避免阳光直射或靠近热源（如灶台、暖气）。若发现漏冷或散热不良，及时维修或调整位置。', 'category': '设备使用', 'estimated_saving': 20.0, 'estimated_cost_saving': 10.0, 'implementation_difficulty': '低', 'reasoning': '冰箱异常高耗电可能由简单问题引起。改善散热和密封可降低压缩机负荷，提升效率10%-15%，实施零成本且见效快，是优先排查项。'}]}
+2025-10-28 21:18:22,404 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 21:18:22,404 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 21:18:22,405 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:18:22,415 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:18:22,415 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:18:22,422 - app.routers.recommendations - ERROR - AI建议生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:23:52,528 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 21:23:52,529 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 21:23:52,529 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 21:23:52,539 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:23:52,540 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:23:52,560 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 21:23:52,560 - app.services.ai_enhanced_recommendation_engine - INFO - energy_analysis 对象类型: <class 'app.schemas.EnergyAnalysis'>
+2025-10-28 21:23:52,561 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 21:23:52,561 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 21:23:52,561 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 21:24:06,564 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:24:06,570 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准，整体能效表现较差。尽管房屋面积较小且仅一人居住，但月度总能耗达到439.0 kWh，约为同类家庭平均值的4.17倍，存在明显的节能优化空间。', 'key_insights': ['空调是最大能耗设备，占总能耗的56.9%，在秋季使用强度过高，可能存在设定温度不合理或长时间运行问题。', '冰箱日均运行能耗较高（约4.8 kWh/天），可能与设备老化、密封不良或环境温度影响有关。', '热水器能耗占比10.2%，属于正常范围，但仍可优化使用时段以避开高峰电价。', '单人居住小户型家庭的日均能耗达14.6 kWh，远超同类用户平均水平，反映出用电习惯有待改善。', '缺乏其他电器（如照明、电视、电脑等）的明细数据，暗示可能存在未被监控的隐性耗电设备或线路损耗。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'analysis': '在秋季仍消耗大量电力，推测为空调制冷或制热模式过度使用，建议检查温控设置和使用时长，考虑改用风扇或自然通风替代。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'analysis': '能耗偏高，可能由于设备能效等级较低（如超过10年老机）、频繁开门或散热环境不佳导致持续高负荷运行。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'analysis': '处于合理区间，若为电热水器，建议采用定时加热并降低保温时间以进一步节能。'}}, 'seasonal_impact': '秋季气温适中，理论上应进入低能耗过渡期，空调使用需求下降。然而该家庭空调能耗仍居高不下，表明季节性调节策略缺失，未能根据气候条件调整设备使用行为，导致不必要的能源浪费。'}
+2025-10-28 21:24:06,571 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 21:24:06,571 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1381
+2025-10-28 21:24:06,571 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 21:24:22,039 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:24:22,041 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用习惯，合理设定温度', 'description': '将空调温度设定在26℃以上制冷或20℃以下制热，并避免长时间连续运行。建议使用定时功能，在入睡后1-2小时自动关闭。在天气适宜时优先开窗通风或使用风扇。', 'category': '生活习惯', 'estimated_saving': 100.0, 'estimated_cost_saving': 50.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗的56.9%，远高于正常水平。秋季气温适中，应减少依赖空调。合理设置温度和使用时间可显著降低无效能耗。'}, {'title': '检查并维护冰箱密封性与散热环境', 'description': '检查冰箱门封条是否老化漏气，清理背部散热器灰尘，确保周围留有至少10厘米通风空间。避免频繁开门和长时间开门操作。', 'category': '设备使用', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电4.8 kWh，明显偏高，可能由密封不良或散热不佳导致压缩机持续工作。基础维护即可提升能效。'}, {'title': '为热水器设置定时加热时段', 'description': '将电热水器设定为每天固定时间段加热（如傍晚17:00-19:00），避免全天保温运行。洗澡前1小时启动加热，洗完后关闭电源。', 'category': '生活习惯', 'estimated_saving': 15.0, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '低', 'reasoning': '虽然热水器能耗占比处于正常范围，但通过错峰加热和减少保温时间仍可有效节能，尤其适用于单人居住场景。'}, {'title': '评估更换老旧冰箱为一级能效型号', 'description': '若冰箱使用超过8年，建议考虑更换为一级能效节能型号。新机型日均耗电可控制在1.0 kWh以内，大幅降低长期能耗。', 'category': '设备升级', 'estimated_saving': 110.0, 'estimated_cost_saving': 55.0, 'implementation_difficulty': '高', 'reasoning': '当前冰箱月耗电144 kWh，约为同容量新型节能冰箱的3-4倍。更换设备初期投入较大，但长期节能效果显著，投资回收期约2-3年。'}]}
+2025-10-28 21:24:22,041 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 21:24:22,041 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 21:24:22,042 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:24:22,042 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:24:22,050 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:24:22,050 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:24:22,051 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:24:22,059 - app.routers.recommendations - ERROR - AI建议生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:43:59,080 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 21:43:59,080 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 21:43:59,081 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 21:43:59,087 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:43:59,087 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:43:59,100 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 21:43:59,100 - app.services.ai_enhanced_recommendation_engine - INFO - energy_analysis 对象类型: <class 'app.schemas.EnergyAnalysis'>
+2025-10-28 21:43:59,100 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 21:43:59,100 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 21:43:59,100 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 21:44:23,714 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:44:23,725 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著偏高，尽管为单人居住且房屋面积较小，但总用电量达到基准值的416.5%，远超正常范围。整体能效表现较差，存在明显的节能优化空间。', 'key_insights': ['空调是最大能耗设备，占总用电量的56.9%，在秋季使用强度过高，可能存在温度设定不合理或长时间运行问题。', '冰箱日均耗电约4.8 kWh，对于常规家用冰箱而言偏高，可能与设备老化、密封不良或频繁开启有关。', '热水器能耗占比10.2%，属于合理范围，但仍可优化使用时段以避开高峰电价。', '日均能耗达14.6 kWh，远高于同类型家庭（55㎡，单人）的典型日均6-8 kWh水平。', '缺乏其他电器（如照明、电视、电脑等）的明细数据，暗示可能存在未监控的次要负载或计量覆盖不全。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'assessment': '严重偏高，秋季应减少空调依赖，建议检查设定温度是否过低（如低于24℃），或是否存在制冷模式误开启情况。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'assessment': '明显偏高，建议检查冰箱是否老旧（超过10年）、门封条密封性、背部散热情况及除霜频率。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'assessment': '处于正常区间，若为储水式电热水器，建议设定温度不超过55℃，并考虑定时关闭。'}}, 'seasonal_impact': '秋季气温适中，通常为空调使用淡季，但该家庭空调能耗仍占据主导地位，表明季节性调节策略失效。应更多利用自然通风降温，减少机械制冷依赖。同时，取暖设备尚未启用，冬季前是进行节能干预的最佳窗口期。'}
+2025-10-28 21:44:23,735 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 21:44:23,747 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1378
+2025-10-28 21:44:23,747 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 21:44:46,146 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:44:46,147 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '调整空调使用习惯并优化温度设定', 'description': '将空调温度设定在26℃及以上，仅在室外高温时段（如中午至下午）短时间开启，并优先使用自然通风。关闭空调后及时关闭电源，避免待机耗电。', 'category': '生活习惯', 'estimated_saving': 120, 'estimated_cost_saving': 60, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗的56.9%，远高于秋季合理水平。适当提高设定温度和减少运行时间可显著降低能耗，且无需额外投入成本。'}, {'title': '检查并维护冰箱密封性与散热系统', 'description': '清洁冰箱背部散热器灰尘，检查门封条是否老化或漏气（可通过纸张夹持测试），确保关门严密。减少频繁开门次数，每次开门时间控制在10秒内。', 'category': '设备使用', 'estimated_saving': 30, 'estimated_cost_saving': 15, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电4.8 kWh偏高，密封不良或散热不佳会导致压缩机持续工作。简单维护即可提升能效，尤其对使用年限较长的设备效果明显。'}, {'title': '为电热水器设置定时开关并调低加热温度', 'description': '将热水器加热温度设定为55℃，并加装定时插座，在非用水高峰时段（如夜间）自动关闭电源，每天减少8小时无效保温运行。', 'category': '设备使用', 'estimated_saving': 15, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '中', 'reasoning': '虽然热水器能耗处于正常范围，但持续保温造成不必要的能量损耗。通过定时控制可有效减少空转耗电，投资小、回报快。'}, {'title': '评估更换老旧冰箱为一级能效新型号', 'description': '若冰箱使用超过10年，建议更换为一级能效、容量匹配的新机型。新冰箱日均耗电可降至1.0–1.5 kWh，节能效果显著。', 'category': '设备升级', 'estimated_saving': 100, 'estimated_cost_saving': 50, 'implementation_difficulty': '高', 'reasoning': '当前冰箱月耗电144 kWh明显偏高，老旧设备效率衰减严重。更换高效型号虽需初期投入，但长期节能潜力最大，预计1–2年可收回成本。'}]}
+2025-10-28 21:44:46,147 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 21:44:46,147 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: AIEnhancedRecommendationEngine._convert_ai_recommendation() missing 1 required positional argument: 'energy_analysis'
+2025-10-28 21:44:46,148 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:44:46,148 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:44:46,158 - app.routers.recommendations - ERROR - AI建议生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:47:44,408 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 21:47:44,409 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 21:47:44,409 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 21:47:44,416 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:47:44,416 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:47:44,428 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 21:47:44,429 - app.services.ai_enhanced_recommendation_engine - INFO - energy_analysis 对象类型: <class 'app.schemas.EnergyAnalysis'>
+2025-10-28 21:47:44,429 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 21:47:44,429 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 21:47:44,429 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 21:48:06,466 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:48:06,475 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著偏高，尽管为单人居住且房屋面积较小，但总能耗达到基准值的416.5%，表明存在明显的能效问题或用电不合理现象。', 'key_insights': ['空调是最大能耗设备，占总能耗的56.9%，在秋季使用如此高的空调能耗极不寻常，可能存在过度制冷或设备老化导致效率下降。', '冰箱日均运行能耗较高，达4.8 kWh/天，在同类设备中偏高，可能与使用年限较长、密封性差或频繁开启有关。', '热水器能耗相对合理，占总能耗约10.2%，符合单人日常使用预期。', '整体日均能耗达14.6 kWh，远高于同类型家庭（相似人数与面积）的平均水平，显示用电习惯有待优化。', '缺乏节能设备或智能控制策略，如定时关闭空调、节能模式启用等。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'assessment': '严重偏高，秋季应减少空调使用，建议检查设定温度、运行时长及设备能效状态。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'assessment': '偏高，建议检查设备是否老旧、除霜情况、放置位置通风性及门封密封性。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'assessment': '处于合理范围，可考虑缩短加热时间或降低设定温度以进一步节能。'}}, 'seasonal_impact': '秋季气温适中，通常为空调使用低峰期，但该家庭空调能耗占比超过一半，明显违背季节性规律，推测存在持续运行或温控设置过低的问题，季节性调节能力较差。'}
+2025-10-28 21:48:06,475 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 21:48:06,476 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1310
+2025-10-28 21:48:06,476 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 21:48:32,392 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:48:32,393 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用习惯并调整温度设定', 'description': '将空调设定温度从当前可能过低的值（如低于24℃）提高至26-28℃，并在无人或夜间时关闭空调。使用定时功能避免长时间空转。秋季气温适宜，可多利用自然通风降温。', 'category': '生活习惯', 'estimated_saving': 100, 'estimated_cost_saving': 50, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗56.9%，远高于正常水平。秋季不应频繁使用空调制冷，过度制冷是主要能效问题。合理设置温度和运行时间可显著降低能耗。'}, {'title': '检查并维护冰箱密封性与散热环境', 'description': '检查冰箱门封是否老化漏气，清理冷凝器灰尘，并确保冰箱周围留有至少10cm通风空间以利散热。避免频繁开门和长时间开门操作。', 'category': '设备使用', 'estimated_saving': 30, 'estimated_cost_saving': 15, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电达4.8kWh，明显偏高。密封不良或散热不佳会导致压缩机持续工作，增加能耗。简单维护即可提升效率。'}, {'title': '更换高能效等级的新款节能空调', 'description': '考虑将现有空调升级为一级能效变频空调，新机型在相同制冷量下能耗可降低30%-40%，并支持智能温控和自动启停功能。', 'category': '设备升级', 'estimated_saving': 80, 'estimated_cost_saving': 40, 'implementation_difficulty': '高', 'reasoning': '当前空调在秋季仍高负荷运行，极可能为老旧低效型号。更换高效设备虽初期投入大，但长期节能效果显著，投资回收期约2-3年。'}, {'title': '启用热水器定时加热模式', 'description': '将热水器设置为每日固定时间段加热（如早晨或傍晚各1小时），避免全天保持高温待用状态，减少保温过程中的热损失和重复加热。', 'category': '生活习惯', 'estimated_saving': 15, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '中', 'reasoning': '虽然热水器能耗处于合理范围，但仍有优化空间。定时加热可减少无效运行时间，进一步降低待机能耗。'}]}
+2025-10-28 21:48:32,394 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 21:48:32,394 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 21:48:32,394 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:48:32,394 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:48:32,403 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:48:32,404 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:48:32,404 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:48:32,411 - app.routers.recommendations - ERROR - AI建议生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:55:07,377 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 21:55:07,377 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 21:55:07,377 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 21:55:07,384 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:55:07,384 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:55:07,396 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 21:55:07,397 - app.services.ai_enhanced_recommendation_engine - INFO - energy_analysis 对象类型: <class 'app.schemas.EnergyAnalysis'>
+2025-10-28 21:55:07,397 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 21:55:07,397 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 21:55:07,397 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 21:55:33,922 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:55:33,930 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准，整体能效表现较差。尽管房屋面积较小且仅一人居住，但月度总能耗高达439.0 kWh，约为同类家庭平均值的4.17倍，存在明显的节能优化空间。', 'key_insights': ['空调是最大能耗设备，占总用电量的56.9%，在秋季使用如此高电量可能存在设置温度过低或运行时间过长的问题。', '冰箱日均耗电约4.8 kWh，远高于标准节能型号的日均0.5–1.5 kWh范围，可能设备老化、密封不良或温控设置过低。', '热水器能耗占比10.2%，属于合理范围，但仍可优化使用时段以避开高峰电价。', '单人居住的小户型家庭日均14.6 kWh用电严重偏高，正常应低于8 kWh/天，提示存在设备效率低下或长时间待机等问题。', '与基准相比能耗高出416.5%，表明用电行为和设备管理亟需改进。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'analysis': '空调在秋季仍消耗大量电力，推测可能用于除湿或持续制冷，建议检查设定温度（推荐26°C以上）、清洁滤网并考虑使用定时功能减少运行时长。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'analysis': '冰箱能耗异常高，可能是老旧型号（如超过10年）、门封条漏冷气、频繁开门或环境散热不良所致，建议进行能效检测或更换为一级能效产品。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'analysis': '热水器能耗处于正常区间，若为储水式建议设定温度在50–55°C，并在非使用时段关闭电源以节约能源。'}}, 'seasonal_impact': '秋季气温适中，理论上应进入低能耗过渡期，空调和采暖设备应较少启用。然而该家庭空调仍占据近六成用电，说明季节性节能潜力未被利用，可能存在过度依赖空调调节室内环境的情况，建议改用自然通风或风扇辅助降温。'}
+2025-10-28 21:55:33,930 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 21:55:33,931 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1449
+2025-10-28 21:55:33,931 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 21:56:09,158 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 21:56:09,159 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '调整空调设定温度并启用定时功能', 'description': '将空调制冷温度从当前可能过低的设置（如24°C以下）调高至26–28°C，并在入睡后或外出时使用定时关闭功能，减少不必要的运行时间。同时定期清洁滤网以提升换热效率。', 'category': '设备使用', 'estimated_saving': 80.0, 'estimated_cost_saving': 40.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗56.9%（250kWh/月），远高于正常秋季需求。适当提高设定温度和减少运行时长可显著降低能耗，且无需额外支出。'}, {'title': '改用自然通风与风扇替代空调除湿降温', 'description': '在早晚气温较低时段开窗通风，配合使用电风扇促进空气流通，避免全天开启空调进行除湿或降温，特别是在湿度不高但体感闷热的情况下。', 'category': '生活习惯', 'estimated_saving': 50.0, 'estimated_cost_saving': 25.0, 'implementation_difficulty': '低', 'reasoning': '秋季本应为低能耗过渡期，过度依赖空调导致能耗异常。通过行为调整利用自然条件调节室温，能有效减少空调负荷。'}, {'title': '检查冰箱密封性与散热环境并优化使用习惯', 'description': '检查冰箱门封条是否老化漏气，清理背部散热器灰尘，确保周围留有足够散热空间；减少频繁开门次数，食物冷却后再放入冰箱。', 'category': '设备使用', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电4.8kWh，远超同类产品1–1.5kWh水平，密封不良或散热不佳是常见原因，简单维护即可带来明显节能效果。'}, {'title': '更换老旧冰箱为一级能效节能型号', 'description': '若冰箱使用超过8–10年，建议更换为新型一级能效变频冰箱，新机型日均耗电可控制在1.0kWh以内，大幅降低长期运行成本。', 'category': '设备升级', 'estimated_saving': 100.0, 'estimated_cost_saving': 50.0, 'implementation_difficulty': '高', 'reasoning': '当前冰箱月耗电144kWh，约为高效型号的3–5倍。虽然初期投入较高，但年节电可达1200kWh以上，投资回收期约2–3年。'}, {'title': '优化热水器使用时段并设定合理温度', 'description': '将储水式热水器温度设定在50–55°C之间，并在非沐浴时段（如白天外出时）关闭电源，或安装定时开关实现自动启停。', 'category': '设备使用', 'estimated_saving': 15.0, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '中', 'reasoning': '热水器虽处于合理能耗范围，但仍可通过错峰使用和减少保温损耗进一步节能，尤其适用于非连续使用场景。'}]}
+2025-10-28 21:56:09,160 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 5
+2025-10-28 21:56:09,160 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 5
+2025-10-28 21:56:09,160 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:56:09,161 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:56:09,174 - app.services.ai_enhanced_recommendation_engine - ERROR - AI推荐生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 21:56:09,175 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 21:56:09,175 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 21:56:09,184 - app.routers.recommendations - ERROR - AI建议生成失败: 'str' object has no attribute 'start_date'
