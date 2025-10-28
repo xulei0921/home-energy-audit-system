@@ -1,0 +1,7 @@
+SQLAlchemy~=2.0.44
+python-dotenv~=1.1.1
+pydantic~=2.12.3
+fastapi~=0.119.1
+passlib~=1.7.4
+uvicorn~=0.38.0
+python-jose~=3.5.0
