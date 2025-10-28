@@ -7,11 +7,22 @@ import uvicorn
 
 from .database import engine, Base
 from .routers import users, devices, energy_readings, recommendations
+import logging
 
 # 创建数据库表
 Base.metadata.create_all(bind=engine)
 
 load_dotenv()
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler('app.log', encoding='utf-8')
+    ]
+)
 
 app = FastAPI(
     title="家庭能耗体检与节能建议系统",

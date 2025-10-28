@@ -76,7 +76,7 @@ def mark_recommendation_implemented(
 @router.post("/ai/generate", response_model=List[schemas.RecommendationResponse])
 async def generate_ai_recommendations(
         user_id: int,
-        ai_provider: str = "openai",
+        ai_provider: str = "tongyi",
         background_tasks: BackgroundTasks = None,
         db: Session = Depends(get_db)
 ):

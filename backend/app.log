@@ -1,0 +1,45 @@
+2025-10-28 09:35:44,077 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 09:35:44,077 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True
+2025-10-28 09:35:44,094 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到能耗分析数据: 总能耗0.0kWh
+2025-10-28 09:35:44,094 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 09:36:01,757 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 09:36:01,764 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭当前月度能耗数据存在明显异常，本月总能耗、日均能耗及电费估算均为0.0，但设备能耗中空调却记录了288.0 kWh的耗电量，且上月（2025-09）能耗为513.0 kWh，数据逻辑不一致。整体能效评估受限于数据准确性，无法真实反映实际用电水平。', 'key_insights': ['本月总能耗与设备分项能耗之间存在严重数据矛盾：空调单独耗电288.0 kWh，但总能耗显示为0.0 kWh，表明数据采集或汇总系统可能存在故障。', '上月能耗高达513.0 kWh，对于一个55平方米、单人居住的家庭而言属于较高水平，尤其在秋季非极端气温条件下，提示可能存在高能耗使用习惯或设备效率问题。', '空调成为唯一记录的能耗设备，占比异常突出，结合高能耗数值，推测可能存在持续运行、温度设定不合理或设备老化导致能效下降的问题。', '日均能耗为0.0 kWh与历史数据不符，系统可能未正确同步或重置数据，影响节能分析与用户反馈的可靠性。', '缺乏照明、冰箱、热水器等基础家电能耗记录，不符合正常家庭用电特征，提示监测设备覆盖不全或通信异常。'], 'efficiency_level': '低', 'main_consumption_sources': {'primary_device': '空调(air_conditioner)', 'consumption_value': 288.0, 'unit': 'kWh', 'analysis': '空调在本月记录288.0 kWh能耗，是唯一可见的耗电设备。考虑到秋季气温适宜，空调不应成为主要负荷。如此高的能耗可能源于长时间运行、设定温度过低（如制冷模式持续开启）、设备能效等级较低（如非变频老旧机型）或传感器故障导致误运行。建议检查空调运行模式、清洁滤网、设定合理温控策略，并排查是否存在自动化控制错误。'}, 'seasonal_impact': {'current_season': '秋', 'expected_behavior': '秋季通常为过渡季节， heating and cooling demands are minimal. Expected energy consumption should be among the lowest of the year, especially in a small apartment with one occupant.', 'observed_deviation': 'Despite mild seasonal conditions, the recorded air conditioning usage suggests either continued cooling demand due to indoor heat gain or improper thermostat settings. Alternatively, the system may have been left in cooling mode unnecessarily. No heating contribution is expected yet, but early use could begin in late autumn depending on regional climate.', 'recommendation': "Review HVAC scheduling and consider switching to 'auto' mode with a sensible temperature setpoint (e.g., 26°C for cooling). Use natural ventilation during cooler mornings and evenings to reduce mechanical cooling dependency."}}
+2025-10-28 09:36:01,769 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 09:36:48,536 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 09:36:48,537 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 0
+2025-10-28 09:36:48,538 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 0
+2025-10-28 09:36:48,538 - app.services.ai_enhanced_recommendation_engine - WARNING - AI未生成有效建议，回退到规则引擎
+2025-10-28 09:55:51,577 - app.routers.recommendations - ERROR - AI建议生成失败: name 'logger' is not defined
+2025-10-28 10:06:39,637 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 10:06:39,637 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 10:06:39,637 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True
+2025-10-28 10:06:39,654 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到能耗分析数据: 总能耗0.0kWh
+2025-10-28 10:06:39,654 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 10:06:39,655 - app.services.tongyi_service - INFO - 分析提示词长度: 401
+2025-10-28 10:06:39,655 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 10:06:56,997 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 10:06:57,003 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭本月记录的总能耗为0.0 kWh，日均能耗也为0.0 kWh，表明未检测到任何电力消耗。这种情况在实际居住的两口之家、面积70平方米的住宅中极不寻常，可能反映数据采集系统存在故障、电表未启用或房屋暂时无人居住。', 'key_insights': ['本月能耗数据为零，不符合正常家庭用电行为模式。', '电费估算为¥0，与能耗为零一致，但不符合秋季基本生活用电需求（如照明、冰箱、待机设备等）。', '基准对比显示节能100%，但这更可能是数据异常而非真实节能成果。', '设备能耗分布和月度趋势数据缺失，无法识别主要用电设备和使用模式。', '尽管秋季气候温和有利于节能，但完全无能耗仍属异常。'], 'efficiency_level': '低', 'main_consumption_sources': '由于所有能耗数据为零，无法识别主要用电设备。正常情况下，70平方米两口之家的主要能耗来源应包括冰箱、照明、电视、洗衣机、路由器及厨房电器等。', 'seasonal_impact': '秋季气温适中，通常无需大量使用空调或采暖设备，属于全年中能耗较低的季节。然而，即便在此季节，基础生活用电仍应存在持续性能耗（如冰箱24小时运行），因此当前零能耗数据不能归因于季节性节能效应。'}
+2025-10-28 10:06:57,003 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 10:06:57,003 - app.services.tongyi_service - INFO - 建议生成提示词长度: 955
+2025-10-28 10:06:57,003 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 10:07:27,825 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 10:07:27,825 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 5
+2025-10-28 10:07:27,827 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 5
+2025-10-28 10:07:27,833 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 2
+2025-10-28 10:22:36,534 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 10:22:36,534 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 10:22:36,534 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True
+2025-10-28 10:22:36,553 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到能耗分析数据: 总能耗0.0kWh
+2025-10-28 10:22:36,553 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 10:22:36,553 - app.services.tongyi_service - INFO - 分析提示词长度: 455
+2025-10-28 10:22:36,553 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 10:23:01,700 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 10:23:01,706 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭当前月度能耗数据存在明显异常，本月总能耗为0.0 kWh，但设备能耗中空调却记录了288.0 kWh的消耗，数据逻辑不一致。同时与上月513.0 kWh相比下降100%，且电费为0，这在实际居住情况下极不可能发生。整体能效评估受限于数据准确性，无法真实反映实际能耗水平。', 'key_insights': ['本月总能耗与设备能耗存在严重数据矛盾：总能耗为0.0 kWh，但空调单独耗电达288.0 kWh，表明数据采集或传输可能存在故障。', '上月能耗为513.0 kWh，属于较高水平，尤其对于单人居住的55平方米住宅。', '日均能耗显示为0.0 kWh，与设备实际运行记录不符，进一步验证数据异常。', '基准对比为-100.0%，意味着系统认为当前能耗远低于基准，但结合空调使用情况，此结论不可信。', '可能存在智能电表读数错误、数据同步失败或设备分类统计错误。'], 'efficiency_level': '低', 'main_consumption_sources': '根据现有设备数据，空调是唯一记录的能耗设备，达288.0 kWh，占总设备能耗的100%。然而由于总能耗被记录为0.0 kWh，该分布数据无法被验证。若以空调能耗为真实值，则其可能是主要能耗来源，需关注其使用频率、设定温度及能效等级。', 'seasonal_impact': '当前处于秋季，气温通常较为温和，空调使用需求较低。若空调确实消耗288.0 kWh，则表明可能存在过度使用、设备老化或用于非制冷用途（如除湿或制热），在秋季出现如此高空调能耗不符合典型季节性用电模式，建议检查空调运行模式及必要性。'}
+2025-10-28 10:23:01,706 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 10:23:01,706 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1112
+2025-10-28 10:23:01,706 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 10:23:34,572 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 10:23:34,573 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '检查并修复电表或数据采集系统', 'description': '联系电力服务提供商或智能家居系统供应商，核实智能电表读数是否准确，排查数据同步故障。确认总能耗与分项设备能耗之间的逻辑一致性，确保空调288.0 kWh的耗电量能正确反映在总用电中。', 'category': '设备升级', 'estimated_saving': 0, 'estimated_cost_saving': 0, 'implementation_difficulty': '高', 'reasoning': '当前总能耗为0.0 kWh但空调单独记录288.0 kWh，存在严重数据矛盾，无法进行有效节能分析。必须首先解决数据准确性问题，才能制定后续节能策略。'}, {'title': '核查空调异常高能耗原因', 'description': '调查空调在秋季是否被频繁用于制冷、制热或除湿模式。检查设定温度、运行时长、过滤网清洁状况及是否存在设备老化导致效率下降。若为空调误设或故障运行，及时调整或维修。', 'category': '设备使用', 'estimated_saving': 150, 'estimated_cost_saving': 90, 'implementation_difficulty': '中', 'reasoning': '秋季通常无需高强度使用空调，若本月空调实际耗电达288 kWh，则属于异常高值。通过优化使用习惯和维护设备，预计可节省约50%空调能耗。'}, {'title': '设定合理的空调温控策略', 'description': '将夏季制冷温度设定在26°C以上，冬季制热设定在20°C以下，并配合使用定时开关功能。避免长时间无人时持续运行，建议关闭或切换至通风模式。', 'category': '生活习惯', 'estimated_saving': 80, 'estimated_cost_saving': 48, 'implementation_difficulty': '低', 'reasoning': '合理设定空调温度可显著降低能耗。根据ASHRAE标准，每提高1°C制冷设定温度，可节能约6-8%。结合该户型面积（55㎡），预计每月可节约可观电量。'}, {'title': '定期维护空调设备以提升能效', 'description': '每两个月清洗一次空调滤网，每年进行一次专业内部清洁与制冷剂检测。确保散热良好、风道畅通，防止因积尘导致压缩机过载运行。', 'category': '设备使用', 'estimated_saving': 40, 'estimated_cost_saving': 24, 'implementation_difficulty': '低', 'reasoning': '脏污滤网可使空调能耗增加15%-20%。对于已显示高耗电的空调设备，基础维护是最具成本效益的节能措施之一。'}]}
+2025-10-28 10:23:34,573 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-28 10:23:34,573 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-28 10:23:34,582 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 3

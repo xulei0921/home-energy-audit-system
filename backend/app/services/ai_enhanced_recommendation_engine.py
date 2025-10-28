@@ -15,9 +15,12 @@ class AIEnhancedRecommendationEngine(RecommendationEngine):
         super().__init__(db, user_id)
         self.ai_service = AIServiceFactory.create_service(ai_provider)
         self.use_ai = self.ai_service is not None
+        logger.info(f"AI服务初始化: 使用{ai_provider}，可用性: {self.use_ai}")
 
     async def generate_ai_recommendations(self) -> List[schemas.RecommendationCreate]:
         """使用AI生成推荐建议"""
+
+        logger.info(f"开始生成AI建议，AI服务可用: {self.use_ai}")
 
         if not self.use_ai:
             logger.warning("AI服务不可用，回退到规则引擎")
@@ -27,11 +30,14 @@ class AIEnhancedRecommendationEngine(RecommendationEngine):
             # 获取用户数据
             user = self.db.query(models.User).filter(models.User.id == self.user_id).first()
             if not user:
+                logger.warning("未找到用户，无法生成AI建议")
                 return []
 
             # 获取能耗分析数据
             from .data_processing import get_energy_analysis
             energy_analysis = get_energy_analysis(self.db, self.user_id)
+
+            logger.info(f"获取到能耗分析数据: 总能耗{energy_analysis.total_consumption}kWh")
 
             # 构建用户数据
             user_data = {
@@ -52,18 +58,24 @@ class AIEnhancedRecommendationEngine(RecommendationEngine):
             }
 
             # 使用AI分析能耗
+            logger.info("开始调用AI分析能耗...")
             analysis_result = await self.ai_service.analyze_energy_consumption(
                 user_data, energy_data
             )
+
+            logger.info(f"AI分析结果: {analysis_result}")
 
             if "error" in analysis_result:
                 logger.error(f"AI分析失败: {analysis_result['error']}")
                 return self.generate_recommendations()
 
             # 使用AI生成建议
+            logger.info("开始调用AI生成建议...")
             ai_recommendations = await self.ai_service.generate_recommendations(
                 analysis_result
             )
+
+            logger.info(f"AI生成建议数量: {len(ai_recommendations)}")
 
             # 转换为系统推荐格式
             recommendations = []
@@ -72,8 +84,16 @@ class AIEnhancedRecommendationEngine(RecommendationEngine):
                 if recommendation:
                     recommendations.append(recommendation)
 
+            logger.info(f"转换后的AI建议数量: {len(recommendations)}")
+
+            # 如果AI没有生成建议，回退到规则引擎
+            if not recommendations:
+                logger.warning("AI未生成有效建议，回退到规则引擎")
+                return self.generate_recommendations()
+
             # 合并AI建议和规则建议
             rule_based_recommendations = self.generate_recommendations()
+            logger.info(f"规则引擎生成建议数量: {len(rule_based_recommendations)}")
             all_recommendations = recommendations + rule_based_recommendations
 
             # 去重和排序
@@ -124,7 +144,8 @@ class AIEnhancedRecommendationEngine(RecommendationEngine):
 
         except Exception as e:
             logger.error(f"转换AI建议失败: {e}")
-            return None
+            # return None
+            return self.generate_recommendations()
 
     def _deduplicate_and_rank(self, recommendations: List[schemas.RecommendationCreate]) -> List[
         schemas.RecommendationCreate]:
