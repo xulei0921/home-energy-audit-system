@@ -1,6 +1,4 @@
 from sqlalchemy.orm import Session
-from sqlalchemy.sql.functions import current_user
-
 from .. import models, schemas
 from typing import List
 from datetime import date, timedelta
@@ -255,7 +253,10 @@ class RecommendationEngine:
                 estimated_saving=15.0,
                 estimated_cost_saving=7.5,
                 implementation_difficulty=schemas.DifficultyLevel.low,
-                source="rule_based"
+                source="rule_based",
+                analysis_period=analysis.analysis_period,
+                analysis_start_date=analysis.start_date,
+                analysis_end_date=analysis.end_date
             ),
             schemas.RecommendationCreate(
                 title="待机功耗管理",

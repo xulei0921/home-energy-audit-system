@@ -1,16 +1,13 @@
 import os
 from typing import Optional
 from .ai_base_service import AIBaseService
-from .tongyi_service import TongYiService  # 新增导入
-
-
-# ... 可以注释或删除其他付费服务的导入
+from .tongyi_service import TongYiService
 
 class AIServiceFactory:
     """AI服务工厂"""
 
     @staticmethod
-    def create_service(provider: str = "tongyi") -> Optional[AIBaseService]:  # 默认改为tongyi
+    def create_service(provider: str = "tongyi") -> Optional[AIBaseService]:
         """创建AI服务实例"""
 
         # 优先使用通义千问

@@ -346,7 +346,7 @@ def calculate_monthly_trend(db: Session, user_id: int, start_date: date, end_dat
     trend = []
     for data in monthly_data:
         trend.append({
-            'period': f"{int(data.year)}-W{int(data.month):02d}",
+            'period': f"{int(data.year)}-{int(data.month):02d}",
             'consumption': float(data.total_consumption),
             'cost': float(data.total_cost) if data.total_cost else 0
         })
@@ -385,6 +385,14 @@ def calculate_period_comparison(db: Session, user_id: int, period: schemas.Analy
             # 对比前3个月
             prev_start = current_start - timedelta(days=90)
             prev_end = current_start - timedelta(days=1)
+        elif period == schemas.AnalysisPeriod.last_6_months:
+            # 对比前6个月
+            prev_start = current_start - timedelta(days=180)
+            prev_end = current_start - timedelta(days=1)
+        # elif period == schemas.AnalysisPeriod.current_year:
+        #     # 对比今年
+        #     prev_start = current_start.replace(month=1, day=1)
+        #     prev_end =
         else:
             # 其他周期暂不对比
             return None

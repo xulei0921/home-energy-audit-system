@@ -5,3 +5,5 @@ fastapi~=0.119.1
 passlib~=1.7.4
 uvicorn~=0.38.0
 python-jose~=3.5.0
+openai~=2.6.1
+tenacity~=9.1.2

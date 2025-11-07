@@ -409,3 +409,103 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-10-28 21:56:09,175 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
 2025-10-28 21:56:09,175 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
 2025-10-28 21:56:09,184 - app.routers.recommendations - ERROR - AI建议生成失败: 'str' object has no attribute 'start_date'
+2025-10-28 22:03:36,450 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-28 22:03:36,451 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-28 22:03:36,451 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-28 22:03:36,459 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 22:03:36,459 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 22:03:36,471 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-28 22:03:36,471 - app.services.ai_enhanced_recommendation_engine - INFO - energy_analysis 对象类型: <class 'app.schemas.EnergyAnalysis'>
+2025-10-28 22:03:36,471 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-28 22:03:36,471 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-28 22:03:36,471 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-28 22:03:49,504 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 22:03:49,510 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著偏高，尽管为单人居住且房屋面积较小（55.0平方米），但本月总能耗达439.0 kWh，是基准值的416.5%，表明整体能效表现较差，存在较大的节能优化空间。', 'key_insights': ['空调系统是最大能耗设备，占总用电量的56.9%，在秋季使用强度过高，可能存在过度制冷或温度设定不合理的情况。', '冰箱日均运行能耗较高（144.0 kWh/月），可能与设备老化、密封不良或频繁开启有关，建议进行能效检测。', '热水器能耗相对合理，仅占总用电的10.2%，符合单人使用预期。', '日均能耗达14.6 kWh，远高于同类型家庭平均水平，反映出用电习惯有待优化，特别是空调使用策略。', '缺乏其他主要电器（如照明、洗衣机、电视等）的能耗数据，可能存在未被监控的潜在耗电设备。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'assessment': '严重偏高，秋季气温适宜，空调不应成为主导负载，建议检查设定温度、运行时长及设备状态'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'assessment': '偏高，考虑设备能效等级较低或维护不当，建议清洁冷凝器并评估更换高效型号'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.3, 'assessment': '处于正常范围，符合单人热水需求'}}, 'seasonal_impact': '秋季通常为过渡季节，气候温和，理论上应呈现较低的空调和采暖能耗。然而该家庭空调能耗占比超过一半，明显违背季节性用电规律，推测可能是由于长时间开启空调制冷或温度设定过低所致，季节适应性调节不足导致能源浪费。'}
+2025-10-28 22:03:49,510 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-28 22:03:49,510 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1362
+2025-10-28 22:03:49,510 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-28 22:04:10,314 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-28 22:04:10,315 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用温度和时长', 'description': '将空调设定温度从当前可能过低的值（如低于24℃）调整至推荐范围（26–28℃），并避免全天持续运行。建议仅在需要时开启，例如夜间睡眠时段使用定时功能，白天通风降温。', 'category': '生活习惯', 'estimated_saving': 100.0, 'estimated_cost_saving': 50.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗的56.9%（250 kWh/月），远高于秋季合理水平。适当提高设定温度可显著降低运行时间，据测算每升高1℃约节能6–8%，结合使用习惯调整，预计可节省约40%空调能耗。'}, {'title': '加强自然通风与遮阳减少空调依赖', 'description': '利用早晚室外温度较低时段开窗通风，保持空气流通；白天关闭窗帘或使用遮光帘减少太阳辐射热进入室内，从而降低室温上升速度。', 'category': '生活习惯', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '秋季气温适中，具备良好的自然调节条件。通过被动降温手段减少对空调的依赖，有助于打破‘一热就开空调’的习惯模式，进一步支撑空调节能措施的效果。'}, {'title': '清洁冰箱冷凝器并检查门封密封性', 'description': '定期清理冰箱背部或底部的冷凝器灰尘，确保散热良好；同时检查门封条是否老化、漏气，可通过‘纸张夹持测试’判断密封效果，必要时更换密封条。', 'category': '设备使用', 'estimated_saving': 20.0, 'estimated_cost_saving': 10.0, 'implementation_difficulty': '低', 'reasoning': '冰箱月均耗电144 kWh，明显偏高。积灰和密封不良会导致压缩机频繁启停，增加能耗。清洁维护后通常可降低10–15%能耗，且成本几乎为零，回报率高。'}, {'title': '评估更换高能效等级冰箱', 'description': '若冰箱使用年限超过8年，建议考虑更换为一级能效新型号（如日均耗电低于0.5 kWh）。新机型采用变频压缩机和优化隔热设计，长期运行更省电。', 'category': '设备升级', 'estimated_saving': 60.0, 'estimated_cost_saving': 30.0, 'implementation_difficulty': '高', 'reasoning': '老旧冰箱能效普遍偏低，即使维护良好也难以匹敌新型高效产品。以年耗电500 kWh的老冰箱替换为300 kWh的新款，每月可节电约16.7 kWh，叠加其他因素综合估算可达60 kWh/月节能潜力。'}, {'title': '安装智能插座监控未知电器能耗', 'description': '在常用插座回路（如客厅、书房）加装智能电量监测插座，实时追踪电视、充电设备、路由器等分散负载的实际功耗，识别待机耗电‘隐形杀手’。', 'category': '设备升级', 'estimated_saving': 15.0, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '中', 'reasoning': '当前能耗数据缺失照明、小家电等明细，可能存在长时间待机或误用高功率设备的情况。通过可视化用电数据提升节能意识，并针对性关闭非必要电源，预计可减少10%基础负载。'}]}
+2025-10-28 22:04:10,315 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 5
+2025-10-28 22:04:10,315 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 5
+2025-10-28 22:04:10,316 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-28 22:04:10,316 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-28 22:04:10,325 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 5
+2025-10-28 22:07:50,938 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-29 15:17:27,728 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-10-29 15:19:01,638 - app.services.tongyi_service - INFO - 通义千问服务初始化成功，模型: qwen-plus
+2025-10-29 15:19:01,638 - app.services.ai_enhanced_recommendation_engine - INFO - AI服务初始化: 使用tongyi，可用性: True
+2025-10-29 15:19:01,638 - app.services.ai_enhanced_recommendation_engine - INFO - 开始生成AI建议，AI服务可用: True，分析周期: AnalysisPeriod.last_month
+2025-10-29 15:19:01,641 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-29 15:19:01,642 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-29 15:19:01,662 - app.services.ai_enhanced_recommendation_engine - INFO - 获取到上月分析能耗分析数据: 总能耗439.0kWh
+2025-10-29 15:19:01,662 - app.services.ai_enhanced_recommendation_engine - INFO - energy_analysis 对象类型: <class 'app.schemas.EnergyAnalysis'>
+2025-10-29 15:19:01,662 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI分析能耗...
+2025-10-29 15:19:01,662 - app.services.tongyi_service - INFO - 分析提示词长度: 517
+2025-10-29 15:19:01,663 - app.services.tongyi_service - INFO - 调用通义千问API, 模型: qwen-plus
+2025-10-29 15:19:24,615 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-29 15:19:24,622 - app.services.ai_enhanced_recommendation_engine - INFO - AI分析结果: {'overall_assessment': '该家庭在秋季的能耗水平显著高于基准值，整体能效表现较差。尽管为单人居住且房屋面积较小，但月度总能耗达到439.0 kWh，约为同类家庭平均值的4.17倍，存在明显的节能优化空间。', 'key_insights': ['空调系统是最大能耗设备，占总用电量的56.9%，在秋季此高使用率不符合典型气候需求，可能存在设定温度不合理或设备老化问题。', '冰箱日均运行能耗较高（约4.8 kWh/天），对于55平方米小户型而言，可能为老旧型号或频繁开关门导致额外耗电。', '热水器能耗占比10.2%，处于合理范围，但结合单人居住情况仍有进一步节能潜力。', '日均能耗达14.6 kWh，远超同类型家庭平均水平，反映用电习惯有待改善。', '与基准相比能耗高出416.5%，表明整体用电效率极低，需立即采取节能措施。'], 'efficiency_level': '低', 'main_consumption_sources': {'air_conditioner': {'consumption': 250.0, 'percentage': 56.9, 'analysis': '空调能耗异常偏高，秋季气温适宜，通常无需频繁制冷或制热。可能原因包括：设备能效等级低、温控设置不当、长时间连续运行或存在故障。建议检查维护并调整使用模式。'}, 'refrigerator': {'consumption': 144.0, 'percentage': 32.8, 'analysis': '冰箱能耗占比第二，日均约4.8 kWh，若为非节能型老款设备则功耗偏高。建议确认是否为高能效产品，并检查密封性、除霜情况及放置位置散热条件。'}, 'water_heater': {'consumption': 45.0, 'percentage': 10.2, 'analysis': '热水器能耗比例相对合理，但仍可优化。建议采用定时加热、降低保温温度（如至55℃）以减少待机损耗。'}}, 'seasonal_impact': '秋季一般为过渡季节，室内外温差较小，空调和采暖系统应处于低负荷运行状态。然而该家庭空调能耗占比过半，明显违背季节特征，说明设备使用未根据季节变化进行调整，导致不必要的能源浪费。季节适应性管理严重不足。'}
+2025-10-29 15:19:24,622 - app.services.ai_enhanced_recommendation_engine - INFO - 开始调用AI生成建议...
+2025-10-29 15:19:24,622 - app.services.tongyi_service - INFO - 建议生成提示词长度: 1455
+2025-10-29 15:19:24,623 - app.services.tongyi_service - INFO - 调用通义千问生成模型，模型: qwen-plus
+2025-10-29 15:19:51,333 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-29 15:19:51,334 - app.services.tongyi_service - INFO - 解析后的建议结果: {'recommendations': [{'title': '优化空调使用习惯并调整温控设置', 'description': '将空调温度设定在26℃以上（制冷模式）或20℃以下（制热模式），避免极端温度设定；仅在需要时开启，并利用定时功能避免长时间空转。秋季宜多采用自然通风降温。', 'category': '生活习惯', 'estimated_saving': 120.0, 'estimated_cost_saving': 60.0, 'implementation_difficulty': '低', 'reasoning': '空调占总能耗的56.9%（250kWh/月），远高于正常水平。秋季气候温和，应减少依赖空调。合理设定温度和使用时间可显著降低运行时长和能耗。'}, {'title': '检查并维护冰箱密封性与散热条件', 'description': '清洁冰箱门封条，确保关闭后密封良好；检查是否结霜严重并及时除霜；确保背部散热空间不少于10厘米，远离热源如炉灶或阳光直射。', 'category': '设备使用', 'estimated_saving': 30.0, 'estimated_cost_saving': 15.0, 'implementation_difficulty': '低', 'reasoning': '冰箱日均耗电4.8kWh（约144kWh/月），对小户型而言偏高。密封不良或散热不佳会导致压缩机频繁启动，增加能耗。基础维护即可提升效率。'}, {'title': '更换为一级能效节能型冰箱', 'description': '若当前冰箱为超过8年以上的老旧型号，建议更换为一级能效、容量匹配的小型节能冰箱（如200L左右），支持变频技术以适应负载变化。', 'category': '设备升级', 'estimated_saving': 60.0, 'estimated_cost_saving': 30.0, 'implementation_difficulty': '高', 'reasoning': '老式冰箱日均功耗可达新国标一级产品（约1.5–2.0kWh/天）的2倍以上。更换后可长期稳定降低基础负荷，投资回收期约2–3年。'}, {'title': '为热水器设置定时加热与合理保温温度', 'description': '设定每日固定时间段加热（如傍晚1小时），避免全天保持高温；将水温设定在55℃，既能满足洗浴需求又减少反复加热和热损失。', 'category': '设备使用', 'estimated_saving': 15.0, 'estimated_cost_saving': 7.5, 'implementation_difficulty': '中', 'reasoning': '热水器能耗占比10.2%（45kWh/月），虽处于合理范围，但单人使用无需持续保温。定时+降温策略可有效减少待机加热次数，节省电能。'}]}
+2025-10-29 15:19:51,335 - app.services.ai_enhanced_recommendation_engine - INFO - AI生成建议数量: 4
+2025-10-29 15:19:51,335 - app.services.ai_enhanced_recommendation_engine - INFO - 转换后的AI建议数量: 4
+2025-10-29 15:19:51,335 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-29 15:19:51,335 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-10-29 15:19:51,345 - app.services.ai_enhanced_recommendation_engine - INFO - 规则引擎生成建议数量: 5
+2025-10-31 15:51:32,511 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.current_month, start_date=None, end_date=None
+2025-10-31 15:51:32,511 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-10-01 到 2025-10-31, 天数: 31
+2025-10-31 15:51:46,819 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-10-31 15:51:46,820 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-11-03 08:52:03,774 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-03 08:52:36,428 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-11-03 08:52:36,428 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-10-01 到 2025-10-31, 天数: 31
+2025-11-03 08:53:09,085 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.custom, start_date=2025-09-01, end_date=2025-09-30
+2025-11-03 08:53:09,085 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.custom, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-11-03 11:34:10,228 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.current_month, start_date=None, end_date=None
+2025-11-03 11:34:10,228 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_month, 日期范围: 2025-11-01 到 2025-11-03, 天数: 3
+2025-11-03 11:34:15,494 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-11-03 11:34:15,494 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-10-01 到 2025-10-31, 天数: 31
+2025-11-03 11:34:43,947 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_3_months, start_date=None, end_date=None
+2025-11-03 11:34:43,947 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-08-05 到 2025-11-03, 天数: 91
+2025-11-03 11:37:29,900 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.current_year, start_date=None, end_date=None
+2025-11-03 11:37:29,901 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_year, 日期范围: 2025-01-01 到 2025-11-03, 天数: 307
+2025-11-03 11:38:12,361 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.custom, start_date=2025-09-01, end_date=2025-09-30
+2025-11-03 11:38:12,361 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.custom, 日期范围: 2025-09-01 到 2025-09-30, 天数: 30
+2025-11-03 11:38:26,736 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_3_months, start_date=2025-09-01, end_date=2025-09-30
+2025-11-03 11:38:26,737 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-08-05 到 2025-11-03, 天数: 91
+2025-11-03 11:38:57,981 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_3_months, start_date=None, end_date=None
+2025-11-03 11:38:57,981 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_3_months, 日期范围: 2025-08-05 到 2025-11-03, 天数: 91
+2025-11-03 11:39:12,442 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-11-03 11:39:12,443 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-10-01 到 2025-10-31, 天数: 31
+2025-11-03 11:39:21,639 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.current_year, start_date=None, end_date=None
+2025-11-03 11:39:21,640 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.current_year, 日期范围: 2025-01-01 到 2025-11-03, 天数: 307
+2025-11-03 11:46:48,978 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-11-03 11:46:48,978 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-10-01 到 2025-10-31, 天数: 31
+2025-11-03 11:47:34,021 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_6_months, start_date=None, end_date=None
+2025-11-03 11:47:34,021 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_6_months, 日期范围: 2025-05-07 到 2025-11-03, 天数: 181
+2025-11-03 16:43:23,918 - app.services.data_processing - INFO - get_energy_analysis 调用参数: user_id=1, period=AnalysisPeriod.last_month, start_date=None, end_date=None
+2025-11-03 16:43:23,919 - app.services.data_processing - INFO - 分析周期: AnalysisPeriod.last_month, 日期范围: 2025-10-01 到 2025-10-31, 天数: 31
+2025-11-03 16:51:48,090 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Graduation-Project\home-energy-audit-system\backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'

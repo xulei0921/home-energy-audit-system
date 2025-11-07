@@ -12,8 +12,8 @@ class AIBaseService(ABC):
     """AI服务基类"""
 
     def __init__(self):
-        self.max_retries = 3
-        self.timeout = 30
+        self.max_retries = 3  # 最大重试次数
+        self.timeout = 30   # 超时时间（秒）
 
     @abstractmethod
     async def analyze_energy_consumption(self, user_data: Dict, energy_data: Dict) -> Dict:
@@ -112,11 +112,11 @@ class AIBaseService(ABC):
         """解析AI响应"""
         try:
             # 尝试提取JSON部分
-            start_idx = response.find('{')
-            end_idx = response.rfind('}') + 1
+            start_idx = response.find('{')  # 找到第一个'{'的位置
+            end_idx = response.rfind('}') + 1  # 找到最后一个'}'的位置并+1
             if start_idx != -1 and end_idx != 0:
-                json_str = response[start_idx:end_idx]
-                return json.loads(json_str)
+                json_str = response[start_idx:end_idx]  # 截取JSON字符串
+                return json.loads(json_str)     # 解析为字典并返回
             else:
                 # 如果没有找到JSON，返回原始响应
                 return {"raw_response": response}
